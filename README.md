@@ -1,4 +1,4 @@
-# Strategic Investment Pipeline — Executive Control Room
+# MisoLists.io Strategic Pipeline — Executive Control Room
 
 A free, autonomous, agentic investment-research pipeline. Drop new reports,
 agendas, or forecasts into [`reports/`](./reports) and the system collects,
