@@ -52,6 +52,6 @@ Then open `index.html` in a browser, or serve with `python3 -m http.server`.
 
 ## Notes
 
-This system supports research and decision-making. It does **not** provide
+This system supports research and learning. It does **not** provide
 personalized investment advice or profit guarantees. The grading methodology
 explicitly treats thematic correlation as context, not evidence of returns.
