@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategic Investment Pipeline — Executive Control Room</title>
+<meta name="description" content="Autonomous ingestion, grading, and thematic correlation of the global investment pipeline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23fff1f2'/%3E%3Cpath d='M16 5l1.6 6.4L24 13l-6.4 1.6L16 21l-1.6-6.4L8 13l6.4-1.6z' fill='%23fb7185'/%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+<header class="topbar">
+  <div class="brand">
+    <svg class="brand-mark" width="34" height="34" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <rect width="32" height="32" rx="7" fill="var(--accent-soft)"/>
+      <path d="M9 22V10h2.6l4.4 7V10H18v12h-2.6l-4.4-7v7H9zM21 10h2v12h-2z" fill="var(--accent)"/>
+    </svg>
+    <div class="brand-text">
+      <span class="brand-title">Strategic Investment Pipeline</span>
+      <span class="brand-sub">Executive Control Room · Autonomous Ingestion &amp; Grading</span>
+    </div>
+  </div>
+  <div class="topbar-meta">
+    <span class="status-dot" title="System operational"></span>
+    <span class="status-label">System Operational</span>
+    <span class="meta-sep" aria-hidden="true">·</span>
+    <span class="meta-item">Last refresh <strong id="refresh-time">—</strong></span>
+    <span class="meta-sep" aria-hidden="true">·</span>
+    <span class="meta-item"><strong id="source-count">0</strong> sources</span>
+    <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="container">
+  <!-- KPI strip -->
+  <section class="kpi-grid" aria-label="Pipeline summary">
+    <div class="kpi">
+      <span class="kpi-label">Tracked Entities</span>
+      <span class="kpi-value" id="kpi-total">—</span>
+      <span class="kpi-delta muted">across 5 source files</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-label">Investment Grade (A)</span>
+      <span class="kpi-value accent" id="kpi-a">—</span>
+      <span class="kpi-delta" id="kpi-a-pct">—</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-label">Median Score</span>
+      <span class="kpi-value" id="kpi-median">—</span>
+      <span class="kpi-delta muted">/ 100</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-label">Avg Thematic Probability</span>
+      <span class="kpi-value" id="kpi-thematic">—</span>
+      <span class="kpi-delta muted">correlation strength</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-label">Sectors Covered</span>
+      <span class="kpi-value" id="kpi-sectors">—</span>
+      <span class="kpi-delta muted">distinct themes</span>
+    </div>
+  </section>
+
+  <!-- Charts -->
+  <section class="chart-grid">
+    <div class="card chart-card">
+      <div class="card-head">
+        <h2>Grade Distribution</h2>
+        <span class="card-sub">Calibrated to this 76-entity pipeline</span>
+      </div>
+      <div class="chart-wrap"><canvas id="chart-grade"></canvas></div>
+    </div>
+    <div class="card chart-card">
+      <div class="card-head">
+        <h2>Thematic Correlation (Primary Event)</h2>
+        <span class="card-sub">Top 10 themes by entity count</span>
+      </div>
+      <div class="chart-wrap"><canvas id="chart-theme"></canvas></div>
+    </div>
+  </section>
+
+  <!-- View tabs -->
+  <section class="card panel">
+    <div class="tabbar" role="tablist">
+      <button class="tab active" role="tab" data-tab="colored">Master Pipeline Tracker <span class="tab-tag">Colored workbook · sheet 2</span></button>
+      <button class="tab" role="tab" data-tab="graded">Graded Pipeline <span class="tab-tag">Graded workbook · sheet 1</span></button>
+      <button class="tab" role="tab" data-tab="methodology">Methodology <span class="tab-tag">Graded workbook · sheet 2</span></button>
+      <button class="tab" role="tab" data-tab="lineage">System &amp; Data Lineage</button>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls" id="controls">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="search" id="search" placeholder="Search company, sector, event, source…">
+      </div>
+      <select id="filter-grade" class="select"><option value="">All grades</option></select>
+      <select id="filter-sector" class="select"><option value="">All sectors</option></select>
+      <select id="filter-event" class="select"><option value="">All themes</option></select>
+      <div class="spacer"></div>
+      <span class="result-count" id="result-count">—</span>
+      <button class="btn-ghost" id="export-csv">Export CSV</button>
+      <button class="btn-ghost" id="export-json">Export JSON</button>
+    </div>
+
+    <!-- Colored view (Master Pipeline Tracker, 2nd tab) -->
+    <div class="tab-panel active" id="tab-colored" role="tabpanel">
+      <div class="table-scroll">
+        <table class="data-table" id="table-colored">
+          <thead><tr>
+            <th>Company / Entity</th><th>Primary Event</th><th>Thematic Prob.</th><th>Category</th><th>Funding Stage</th><th>IPO Date</th><th>Sector / Theme</th><th>Source</th><th>Strategic Notes</th><th>Hist.</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Graded view -->
+    <div class="tab-panel" id="tab-graded" role="tabpanel">
+      <div class="table-scroll">
+        <table class="data-table" id="table-graded">
+          <thead><tr>
+            <th>Company</th><th>Grade</th><th>Total</th><th>Stage</th><th>Financial</th><th>Capital</th><th>Market</th><th>Risk</th><th>Sector</th><th>Stage Rationale</th><th>Financial Rationale</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Methodology view (Graded, 2nd tab) -->
+    <div class="tab-panel" id="tab-methodology" role="tabpanel">
+      <div class="meth-grid">
+        <div class="meth-doc" id="methodology-body"></div>
+        <aside class="meth-aside">
+          <h3>Colored Tracker Summary</h3>
+          <div id="colored-summary-body" class="summary-list"></div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- Lineage view -->
+    <div class="tab-panel" id="tab-lineage" role="tabpanel">
+      <div class="lineage-section">
+        <h3>Source File Registry</h3>
+        <p class="muted">Every figure traces to an ingested file. New reports, agendas, or forecasts dropped into the ingestion folder are checksummed, normalized, and appended here automatically.</p>
+        <div class="table-scroll">
+          <table class="data-table" id="table-lineage">
+            <thead><tr><th>File</th><th>SHA-256</th><th>Size</th><th>Ingested (UTC)</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="lineage-section">
+        <h3>Knowledge Base Coverage</h3>
+        <div class="kb-grid" id="kb-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span>Strategic Investment Pipeline Control Room</span>
+    <span class="muted">Autonomous ingestion · checksum-deduped · source-lineaged. For research and decision support only — not personalized investment advice.</span>
+  </footer>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
