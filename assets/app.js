@@ -44,7 +44,7 @@
     'E22': 'African market persistence',
     'E26': 'Gray-zone competition'
   };
-  const eventLabel = code => { if (!code || code === 'N/A') return '—'; const d = EVENT_MAP[code]; return d ? `${code} · ${d}` : code; };
+  const eventLabel = code => { if (!code || code === 'N/A') return 'No primary theme'; const d = EVENT_MAP[code]; return d ? `${code} · ${d}` : code; };
 
   function toast(msg) {
     const t = $('#toast'); t.textContent = msg; t.classList.add('show');

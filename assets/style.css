@@ -190,8 +190,8 @@ button { cursor: pointer; background: none; border: none; color: inherit; font: 
 /* ===== Tables ===== */
 .tab-panel { display: none; padding: 0; }
 .tab-panel.active { display: block; }
-.table-scroll { overflow-x: auto; max-height: 70vh; overflow-y: auto; }
-.data-table { width: 100%; border-collapse: collapse; font-size: .8rem; }
+.table-scroll { overflow: auto; max-height: 72vh; overscroll-behavior: contain; }
+.data-table { width: 100%; min-width: 1280px; border-collapse: collapse; font-size: .8rem; }
 .data-table thead th {
   position: sticky; top: 0; z-index: 2;
   background: var(--color-offset); color: var(--color-text-muted);
