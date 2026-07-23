@@ -39,6 +39,15 @@
   </div>
 </header>
 
+<div class="disclaimer-banner" id="disclaimer-banner" role="note">
+  <svg class="disclaimer-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+  <div class="disclaimer-body">
+    <strong>Research &amp; learning aid — not financial advice.</strong>
+    <span>This dashboard aggregates publicly available pipeline data, scenario forecasts, and thematic analysis for educational and decision-support purposes only. Nothing here constitutes financial, investment, legal, or tax advice, or a recommendation or solicitation to buy, sell, or hold any security. Grades, scores, and probabilities are model-derived indicators, not guarantees of future performance. Markets carry risk; conduct your own due diligence and consult a licensed professional before making investment decisions.</span>
+  </div>
+  <button class="disclaimer-close" id="disclaimer-close" aria-label="Dismiss disclaimer">&times;</button>
+</div>
+
 <main class="container">
   <!-- KPI strip -->
   <section class="kpi-grid" aria-label="Pipeline summary">
@@ -113,6 +122,10 @@
 
     <!-- Colored view (Master Pipeline Tracker, 2nd tab) -->
     <div class="tab-panel active" id="tab-colored" role="tabpanel">
+      <details class="event-legend-card">
+        <summary>Primary Event &amp; Thematic Probability legend — what each code means</summary>
+        <div class="event-legend" id="event-legend"></div>
+      </details>
       <div class="table-scroll">
         <table class="data-table" id="table-colored">
           <thead><tr>
@@ -167,7 +180,7 @@
 
   <footer class="foot">
     <span>Strategic Investment Pipeline Control Room</span>
-    <span class="muted">Autonomous ingestion · checksum-deduped · source-lineaged. For research and decision support only — not personalized investment advice.</span>
+    <span class="muted">Autonomous ingestion · checksum-deduped · source-lineaged. A research and learning aid for decision support only — not personalized investment, financial, legal, or tax advice. Conduct your own due diligence and consult a licensed professional before investing.</span>
   </footer>
 </main>
 

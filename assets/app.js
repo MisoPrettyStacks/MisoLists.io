@@ -25,6 +25,27 @@
   const fmtDate = s => { if (!s) return '—'; try { const d = new Date(s); if (isNaN(d)) return s; return d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'2-digit' }); } catch { return s; } };
   const fmtBytes = b => b > 1e6 ? (b/1e6).toFixed(1)+' MB' : b > 1e3 ? (b/1e3).toFixed(0)+' KB' : b+' B';
 
+  // ---- Event code → plain-language label (Primary Event / Thematic Probability) ----
+  // Codes (e.g. E14) map to the thematic driver they reference in the source briefings.
+  const EVENT_MAP = {
+    'E1':  'US–China tech competition',
+    'E3':  'Health security',
+    'E4':  'Food systems',
+    'E6':  'Counterspace / ASAT',
+    'E7':  'Nuclear proliferation',
+    'E9':  'Armed conflict',
+    'E10': 'Cyber',
+    'E11': 'International order fragmentation',
+    'E12': 'Climate strains',
+    'E14': 'AI disruption',
+    'E15': 'Societal fragmentation',
+    'E17': 'Pandemic / biosecurity',
+    'E21': 'Russia asymmetric reliance',
+    'E22': 'African market persistence',
+    'E26': 'Gray-zone competition'
+  };
+  const eventLabel = code => { if (!code || code === 'N/A') return '—'; const d = EVENT_MAP[code]; return d ? `${code} · ${d}` : code; };
+
   function toast(msg) {
     const t = $('#toast'); t.textContent = msg; t.classList.add('show');
     clearTimeout(t._t); t._t = setTimeout(() => t.classList.remove('show'), 2200);
@@ -56,7 +77,7 @@
   sectors.sort().forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = s; sectorSel.appendChild(o); });
   const events = [...new Set(companies.map(c => c.primary_event).filter(Boolean))].sort();
   const eventSel = $('#filter-event');
-  events.forEach(e => { const o = document.createElement('option'); o.value = e; o.textContent = e; eventSel.appendChild(o); });
+  events.forEach(e => { const o = document.createElement('option'); o.value = e; o.textContent = eventLabel(e); eventSel.appendChild(o); });
 
   function filtered() {
     const q = $('#search').value.trim().toLowerCase();
@@ -84,7 +105,7 @@
       const ticker = fs.match(/\(([A-Z0-9: ]+)\)/);
       tr.innerHTML = `
         <td>${esc(c.company)}${ticker?`<div class="ticker">${ticker[1]}</div>`:''}</td>
-        <td>${c.primary_event?`<span class="theme-chip">${esc(c.primary_event)}</span>`:'—'}</td>
+        <td>${c.primary_event?`<span class="theme-chip" title="${esc(eventLabel(c.primary_event))}">${esc(eventLabel(c.primary_event))}</span>`:'—'}</td>
         <td><span class="prob">${esc(c.thematic_probability||'—')}</span></td>
         <td>${esc(c.category||'—')}</td>
         <td class="cell-stage">${fs}</td>
@@ -187,7 +208,7 @@
 
     // grade dist
     const gdata = ['A','B','C','D','F'].map(g => companies.filter(c=>c.grade===g).length);
-    const gColors = ['#4ade80','#5cb6e0','#e0b44a','#e88a5a','#c878c8'];
+    const gColors = ['--grade-a-fg','--grade-b-fg','--grade-c-fg','--grade-d-fg','--grade-f-fg'].map(v => cssVar(v));
     const totalGraded = gdata.reduce((a,b)=>a+b,0);
     const valueLabelPlugin = {
       id: 'valueLabels',
@@ -220,8 +241,8 @@
     if (chartTheme) chartTheme.destroy();
     chartTheme = new Chart($('#chart-theme'), {
       type: 'bar',
-      data: { labels: themes.map(t=>t.k), datasets: [{ label: 'Entities', data: themes.map(t=>t.count), backgroundColor: accent, borderRadius: 5, maxBarThickness: 26 }] },
-      options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { afterLabel: c => { const t = themes[c.dataIndex]; return `Avg correlation: ${t.avg}%`; } } } }, scales: { x: { beginAtZero: true, grid: { color: grid }, ticks }, y: { grid: { display: false }, ticks: { ...ticks, font: { family: 'JetBrains Mono', size: 11 } } } } }
+      data: { labels: themes.map(t=>eventLabel(t.k)), datasets: [{ label: 'Entities', data: themes.map(t=>t.count), backgroundColor: accent, borderRadius: 5, maxBarThickness: 26 }] },
+      options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { afterLabel: c => { const t = themes[c.dataIndex]; return `Avg correlation: ${t.avg}%`; } } } }, scales: { x: { beginAtZero: true, grid: { color: grid }, ticks }, y: { grid: { display: false }, ticks: { ...ticks, font: { family: 'Inter', size: 11 }, autoSkip: false } } } }
     });
   }
 
@@ -266,9 +287,22 @@
     download('pipeline.json', JSON.stringify(filtered(), null, 2), 'application/json');
   });
 
+  // ---- Event legend ----
+  function renderEventLegend() {
+    const wrap = $('#event-legend'); if (!wrap) return;
+    const used = [...new Set(companies.map(c => c.primary_event).filter(v => v && v !== 'N/A'))];
+    const codes = used.filter(c => EVENT_MAP[c]).sort((a,b)=>parseInt(a.slice(1))-parseInt(b.slice(1)));
+    wrap.innerHTML = codes.map(c => `<span class="leg-item"><span class="leg-code">${esc(c)}</span><span class="leg-desc">${esc(EVENT_MAP[c])}</span></span>`).join('');
+  }
+
+  // ---- Disclaimer dismiss ----
+  const dclose = $('#disclaimer-close');
+  if (dclose) dclose.addEventListener('click', () => { const b = $('#disclaimer-banner'); if (b) b.style.display = 'none'; });
+
   // ---- Init ----
   renderMethodology();
   renderLineage();
+  renderEventLegend();
   rebuildCharts();
   refresh();
 })();
