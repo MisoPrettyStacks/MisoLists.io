@@ -1,6 +1,6 @@
 # MisoLists.io Strategic Pipeline — Executive Control Room
 
-A free, autonomous, agentic investment-research pipeline. Drop new reports,
+A free, autonomous, agentic -research pipeline. Drop new reports,
 agendas, or forecasts into [`reports/`](./reports) and the system collects,
 normalizes, scores, and publishes them to a live executive dashboard.
 
