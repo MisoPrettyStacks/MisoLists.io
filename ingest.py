@@ -61,25 +61,36 @@ def prob_num(p):
     m = re.match(r"(\d+(?:\.\d+)?)", str(p))
     return float(m.group(1)) if m else None
 
-def merge_trackers(colored_rows, graded_rows):
+def merge_trackers(colored_rowsets, graded_rowsets):
+    """colored_rowsets / graded_rowsets are LISTS of row-tables — one per
+    report file that contains a matching sheet — so that dropping in
+    additional "Master Pipeline Tracker" / "Graded Pipeline" report files
+    unions them together instead of the ingester picking only one file
+    and silently ignoring the rest."""
     gl = {}
-    for r in graded_rows[1:]:
-        if r and r[0]: gl[r[0].strip().lower()] = r
-    merged = []
-    for r in colored_rows[1:]:
-        if not r or not r[2]: continue
-        company = r[2]
-        g = gl.get(company.strip().lower())
-        def gs(i): return g[i] if g and i < len(g) else None
-        merged.append({
-            "company": company, "primary_event": r[0], "thematic_probability": r[1],
-            "category": r[3], "funding_stage": r[4], "ipo_date": r[5],
-            "sector": r[6] or gs(4), "source": r[7] or gs(5), "notes": r[8], "historical_flag": r[9],
-            "stage_score": num(gs(6)), "financial_score": num(gs(7)), "capital_score": num(gs(8)),
-            "market_score": num(gs(9)), "risk_adj": num(gs(10)), "total_score": num(gs(11)), "grade": gs(12),
-            "stage_rationale": gs(13), "financial_rationale": gs(14), "capital_rationale": gs(15),
-            "market_rationale": gs(16), "risk_rationale": gs(17),
-        })
+    for graded_rows in graded_rowsets:
+        for r in (graded_rows or [])[1:]:
+            if r and r[0]: gl[r[0].strip().lower()] = r
+
+    merged, seen = [], set()
+    for colored_rows in colored_rowsets:
+        for r in (colored_rows or [])[1:]:
+            if not r or not r[2]: continue
+            company = r[2]
+            key = company.strip().lower()
+            if key in seen: continue  # first occurrence wins (report order)
+            seen.add(key)
+            g = gl.get(key)
+            def gs(i): return g[i] if g and i < len(g) else None
+            merged.append({
+                "company": company, "primary_event": r[0], "thematic_probability": r[1],
+                "category": r[3], "funding_stage": r[4], "ipo_date": r[5],
+                "sector": r[6] or gs(4), "source": r[7] or gs(5), "notes": r[8], "historical_flag": r[9],
+                "stage_score": num(gs(6)), "financial_score": num(gs(7)), "capital_score": num(gs(8)),
+                "market_score": num(gs(9)), "risk_adj": num(gs(10)), "total_score": num(gs(11)), "grade": gs(12),
+                "stage_rationale": gs(13), "financial_rationale": gs(14), "capital_rationale": gs(15),
+                "market_rationale": gs(16), "risk_rationale": gs(17),
+            })
     merged.sort(key=lambda x: (x.get("total_score") or 0), reverse=True)
     return merged
 
@@ -125,21 +136,24 @@ def main(folder=DEFAULT_FOLDER):
             if n.lower().endswith(".xlsx") and pred(d): return d
         return None
 
-    col = find_xlsx(lambda d: any("Master Pipeline Tracker" in s for s in d))
-    grd = find_xlsx(lambda d: any("Graded Pipeline" in s for s in d))
+    def find_all_xlsx(pred):
+        return [d for n, d in payloads.items() if n.lower().endswith(".xlsx") and pred(d)]
+
+    col_all = find_all_xlsx(lambda d: any("Master Pipeline Tracker" in s for s in d))
+    grd_all = find_all_xlsx(lambda d: any("Graded Pipeline" in s for s in d))
     orgs = find_xlsx(lambda d: any("Master Overview" in s for s in d))
     icf = find_xlsx(lambda d: any("Comprehensive Report" in s for s in d))
     pdf = next((d for n, d in payloads.items() if n.lower().endswith(".pdf")), None)
 
     c.execute("DELETE FROM pipeline"); c.execute("DELETE FROM methodology")
-    colored_rows = col.get("Master Pipeline Tracker") if col else None
-    colored_sum = col.get("Summary & Methodology") if col else None
-    graded_rows = grd.get("Graded Pipeline") if grd else None
-    graded_meth = grd.get("Methodology") if grd else None
+    colored_rowsets = [d.get("Master Pipeline Tracker") for d in col_all]
+    colored_sum = next((d.get("Summary & Methodology") for d in col_all if d.get("Summary & Methodology")), None)
+    graded_rowsets = [d.get("Graded Pipeline") for d in grd_all]
+    graded_meth = next((d.get("Methodology") for d in grd_all if d.get("Methodology")), None)
     orgs_master = orgs.get("Master Overview") if orgs else None
     orgs_readme = orgs.get("README") if orgs else None
 
-    merged = merge_trackers(colored_rows or [[]], graded_rows or [[]]) if colored_rows else []
+    merged = merge_trackers(colored_rowsets, graded_rowsets) if colored_rowsets else []
     for m in merged:
         c.execute("INSERT INTO pipeline (" + ",".join(m.keys()) + ",ingested_at) VALUES (" + ",".join(["?"] * len(m)) + ",?)",
                   list(m.values()) + [ts])
@@ -149,7 +163,9 @@ def main(folder=DEFAULT_FOLDER):
     db.commit()
 
     meth_lines = [m[0] for m in graded_meth if m and m[0]] if graded_meth else []
-    headers = {"colored": (colored_rows or [[]])[0], "graded": (graded_rows or [[]])[0]}
+    first_colored = next((r for r in colored_rowsets if r), [[]])
+    first_graded = next((r for r in graded_rowsets if r), [[]])
+    headers = {"colored": first_colored[0] if first_colored else [], "graded": first_graded[0] if first_graded else []}
     payload = {
         "generated_at": ts, "headers": headers, "companies": merged, "count": len(merged),
         "methodology": meth_lines, "colored_summary": colored_sum or [],

@@ -31,6 +31,34 @@ normalizes, scores, and publishes them to a live executive dashboard.
 
 Everything runs on GitHub's free tier — no server, no credits, no maintenance.
 
+## Agentic source scanning
+
+`.github/workflows/pioneer-sources.yml` runs `scripts/pioneer_sources.py`
+weekly (plus on manual dispatch, plus whenever the script itself changes).
+It scans a registry of international tech-pioneer / innovator recognition
+programs (WEF's 4 lists, UN/IGO programs, global startup-ecosystem indices,
+Endeavor, and pitch competitions), fetches each source with a headless
+browser (handles JS-rendered pages and most bot-detection walls), extracts
+named entities, and writes `reports/Pioneer_Innovator_Sources_AUTO.xlsx` in
+the same Master Pipeline Tracker / Graded Pipeline schema as everything
+else. That commit lands in `reports/` and automatically triggers
+`ingest.yml`, which merges it into the live dashboard — no manual
+spreadsheet work required.
+
+New entities are scored conservatively: an award/cohort selection alone
+(Stage 5, Financial 0, Capital 0, Market 0, Risk −5 → Grade F) — the same
+convention already used for NATO DIANA / G20 TechSprint cohort-only rows.
+Grade F on an auto-discovered row means "insufficient public disclosure to
+grade," not "bad company"; re-score it by hand once real financial/investor
+data becomes public.
+
+Sources the scanner can't reliably parse (blocked, or a press-release page
+rather than an actual roster) are logged as `NEEDS_REVIEW` in the workbook's
+"Scrape Log" sheet rather than silently skipped or faked. Verified manual
+research can be dropped into `scripts/seed_data/<source_id>.json` (a plain
+list of entity names) as a fallback for sources that are hard to scrape
+live — see `wef_tech_pioneers.json` for an example.
+
 ## The two tracker views
 
 - **Master Pipeline Tracker** (Colored workbook, sheet 2) — thematic view of 76
