@@ -16,10 +16,10 @@
   --color-border: rgba(203, 213, 225, 0.55);
   --color-divider: rgba(241, 245, 249, 0.85);
 
-  --color-text: #1e293b;
-  --color-text-muted: #64748b;
-  --color-text-faint: #94a3b8;
-  --color-text-inverse: #fffafb;
+  --color-text: #000000;
+  --color-text-muted: #000000;
+  --color-text-faint: #000000;
+  --color-text-inverse: #000000;
 
   --accent: #fb7185;
   --accent-hover: #f43f5e;
