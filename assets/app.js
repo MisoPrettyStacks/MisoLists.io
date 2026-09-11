@@ -1,4 +1,4 @@
-/* The Upper Tier */
+/* MisoLists Strategic Pipeline — Control Room app */
 (function () {
   'use strict';
   const D = window.PIPELINE_DATA || {};
