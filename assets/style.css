@@ -48,21 +48,21 @@
   --color-border: rgba(255, 255, 255, 0.1);
   --color-divider: rgba(255, 255, 255, 0.07);
 
-  --color-text: #f5e8ec;
-  --color-text-muted: #c4a9b2;
-  --color-text-faint: #8a7279;
-  --color-text-inverse: #1a1417;
+  --color-text: #000000;
+  --color-text-muted: #000000;
+  --color-text-faint: #000000;
+  --color-text-inverse: #000000;
 
   --accent: #fb7185;
   --accent-hover: #fda4af;
   --accent-soft: rgba(251, 113, 133, 0.16);
   --accent-ink: #fecdd3;
 
-  --grade-a-bg: rgba(251,113,133,0.18); --grade-a-fg: #fda4af;
-  --grade-b-bg: rgba(165,180,252,0.18); --grade-b-fg: #c7d2fe;
-  --grade-c-bg: rgba(252,211,77,0.18);  --grade-c-fg: #fcd34d;
-  --grade-d-bg: rgba(168,162,158,0.18); --grade-d-fg: #d6d3d1;
-  --grade-f-bg: rgba(192,132,252,0.18); --grade-f-fg: #d8b4fe;
+  --grade-a-bg: rgba(251,113,133,0.18); --grade-a-fg: #000000;
+  --grade-b-bg: rgba(165,180,252,0.18); --grade-b-fg: #000000;
+  --grade-c-bg: rgba(252,211,77,0.18);  --grade-c-fg: #000000;
+  --grade-d-bg: rgba(168,162,158,0.18); --grade-d-fg: #000000;
+  --grade-f-bg: rgba(192,132,252,0.18); --grade-f-fg: #000000;
 
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
   --shadow-md: 0 8px 30px rgba(0,0,0,0.3);
