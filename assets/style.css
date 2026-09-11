@@ -30,7 +30,7 @@
   --grade-b-bg: #eef2ff; --grade-b-fg: #fe7d6a;   /* coral */
   --grade-c-bg: #fffbeb; --grade-c-fg: #fc9483;   /* peach */
   --grade-d-bg: #f5f5f4; --grade-d-fg: #fc4c4e;   /* strawberry */
-  --grade-f-bg: #faf5ff; --grade-f-fg: #9e42ee;   /* rosewood */
+  --grade-f-bg: #faf5ff; --grade-f-fg: #000000;   /* black */
 
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
   --shadow-md: 0 8px 30px rgba(0,0,0,0.04);
