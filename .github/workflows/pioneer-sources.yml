@@ -1,0 +1,69 @@
+name: Pioneer Source Scanner
+
+# Weekly agentic scan of the international tech-pioneer / innovator
+# recognition-program registry (see README "Agentic source scanning").
+# The scanner writes reports/Pioneer_Innovator_Sources_AUTO.xlsx, commits it,
+# and then dispatches ingest.yml (bot commits via GITHUB_TOKEN don't trigger
+# other workflows on their own) so the new rows merge into the live dashboard.
+
+on:
+  schedule:
+    # Weekly, Mondays 15:00 UTC (08:00 PT)
+    - cron: "0 15 * * 1"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/pioneer_sources.py"
+      - "scripts/seed_data/**"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: pioneer-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browser
+        run: python -m playwright install --with-deps chromium
+
+      - name: Run source scanner
+        run: python3 scripts/pioneer_sources.py
+
+      - name: Commit scanned report
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/Pioneer_Innovator_Sources_AUTO.xlsx
+          if git diff --staged --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No new entities from scan."
+          else
+            git commit -m "chore(sources): weekly pioneer source scan"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Trigger ingest pipeline
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run ingest.yml --ref main
