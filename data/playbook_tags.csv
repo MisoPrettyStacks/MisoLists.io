@@ -1,0 +1,15 @@
+company,model,moat,notes
+Alphabet,advertising platform,network effects; data scale,Each search improves the product; advertisers must be where users are
+Mastercard,transaction fees per payment,two-sided network,Merchants and cardholders reinforce each other; nearly impossible to displace
+Palantir,government + enterprise software contracts,high switching costs; data integration,Deep embedding in client operations; multi-year contracts
+Meta,advertising platform,network effects; social graph,Users are the product; advertisers follow attention
+Spotify,streaming subscription,scale; weak pricing power,Labels capture most margin; moat is distribution not pricing
+Wise,cross-border transfer fees,price transparency; thin moat,Competes on price in a crowded field; banks can copy
+Enphase Energy,solar hardware sales,technology lead (eroded),Hardware margins compress; solar demand is cyclical/policy-driven
+Airbnb,marketplace booking fees,two-sided network,Hosts and guests reinforce; but regulatory risk in every city
+Dropbox,cloud storage subscription,weak; commodity,Storage is interchangeable; competes with free tiers of giants
+LanzaTech,fuel/project sales,unproven-at-scale technology,Capital-intensive; never reached sustained commercial scale
+Tobii AB,hardware + licensing,niche technology,Small TAM; eye-tracking stayed niche
+23andMe,one-time DNA kits + data licensing,data moat (never monetized),No recurring revenue; data never became the business
+Proteus Digital Health,smart-pill device sales,technology without a market,Raised $500M; no payer would reimburse it
+Solazyme,algae biofuel commodity,no moat vs petroleum,Unit economics never worked against oil prices

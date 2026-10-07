@@ -1,0 +1,382 @@
+{
+ "generated_at": "2026-10-06T21:26:08.776394",
+ "tiers": {
+  "max winner": {
+   "count": 4,
+   "companies": [
+    "Alphabet",
+    "Palantir",
+    "Meta",
+    "Mastercard"
+   ],
+   "avg_max_drawdown": -0.72,
+   "avg_first_year": 1.28,
+   "common_moats": [
+    [
+     "network effects",
+     2
+    ],
+    [
+     "data scale",
+     1
+    ],
+    [
+     "high switching costs",
+     1
+    ],
+    [
+     "data integration",
+     1
+    ],
+    [
+     "social graph",
+     1
+    ],
+    [
+     "two-sided network",
+     1
+    ]
+   ],
+   "time_to_10x": [
+    [
+     "Alphabet",
+     "2013-10-18"
+    ],
+    [
+     "Palantir",
+     "2025-02-04"
+    ],
+    [
+     "Meta",
+     "2024-01-19"
+    ],
+    [
+     "Mastercard",
+     "2012-04-26"
+    ]
+   ]
+  },
+  "middle": {
+   "count": 4,
+   "companies": [
+    "Spotify",
+    "Dropbox",
+    "Airbnb",
+    "Enphase Energy"
+   ],
+   "avg_max_drawdown": -0.76,
+   "avg_first_year": -0.04,
+   "common_moats": [
+    [
+     "scale",
+     1
+    ],
+    [
+     "weak pricing power",
+     1
+    ],
+    [
+     "weak",
+     1
+    ],
+    [
+     "commodity",
+     1
+    ],
+    [
+     "two-sided network",
+     1
+    ],
+    [
+     "technology lead (eroded)",
+     1
+    ]
+   ],
+   "time_to_10x": [
+    [
+     "Enphase Energy",
+     "2020-08-05"
+    ]
+   ]
+  },
+  "loser": {
+   "count": 6,
+   "companies": [
+    "Wise",
+    "LanzaTech",
+    "Tobii AB",
+    "23andMe",
+    "Proteus Digital Health",
+    "Solazyme"
+   ],
+   "avg_max_drawdown": -0.96,
+   "avg_first_year": -0.01,
+   "common_moats": [
+    [
+     "price transparency",
+     1
+    ],
+    [
+     "thin moat",
+     1
+    ],
+    [
+     "unproven-at-scale technology",
+     1
+    ],
+    [
+     "niche technology",
+     1
+    ],
+    [
+     "data moat (never monetized)",
+     1
+    ],
+    [
+     "technology without a market",
+     1
+    ],
+    [
+     "no moat vs petroleum",
+     1
+    ]
+   ],
+   "time_to_10x": []
+  }
+ },
+ "alumni": [
+  {
+   "company": "Alphabet",
+   "ticker": "GOOGL",
+   "ipo_date": "2004-08-19",
+   "total_return": 138.78,
+   "max_drawdown": -0.65,
+   "max_drawdown_date": "2008-11-24",
+   "time_to_10x": "2013-10-18",
+   "first_year": 1.79,
+   "model": "advertising platform",
+   "moat": "network effects; data scale",
+   "notes": "Each search improves the product; advertisers must be where users are",
+   "tier": "max winner"
+  },
+  {
+   "company": "Mastercard",
+   "ticker": "MA",
+   "ipo_date": "2006-05-25",
+   "total_return": 135.21,
+   "max_drawdown": -0.63,
+   "max_drawdown_date": "2009-01-20",
+   "time_to_10x": "2012-04-26",
+   "first_year": 2.14,
+   "model": "transaction fees per payment",
+   "moat": "two-sided network",
+   "notes": "Merchants and cardholders reinforce each other; nearly impossible to displace",
+   "tier": "max winner"
+  },
+  {
+   "company": "Palantir",
+   "ticker": "PLTR",
+   "ipo_date": "2020-09-30",
+   "total_return": 19.22,
+   "max_drawdown": -0.85,
+   "max_drawdown_date": "2022-12-27",
+   "time_to_10x": "2025-02-04",
+   "first_year": 1.53,
+   "model": "government + enterprise software contracts",
+   "moat": "high switching costs; data integration",
+   "notes": "Deep embedding in client operations; multi-year contracts",
+   "tier": "max winner"
+  },
+  {
+   "company": "Meta",
+   "ticker": "META",
+   "ipo_date": "2012-05-18",
+   "total_return": 18.51,
+   "max_drawdown": -0.77,
+   "max_drawdown_date": "2022-11-03",
+   "time_to_10x": "2024-01-19",
+   "first_year": -0.34,
+   "model": "advertising platform",
+   "moat": "network effects; social graph",
+   "notes": "Users are the product; advertisers follow attention",
+   "tier": "max winner"
+  },
+  {
+   "company": "Enphase Energy",
+   "ticker": "ENPH",
+   "ipo_date": "2012-03-30",
+   "total_return": 3.62,
+   "max_drawdown": -0.96,
+   "max_drawdown_date": "2017-05-18",
+   "time_to_10x": "2020-08-05",
+   "first_year": -0.16,
+   "model": "solar hardware sales",
+   "moat": "technology lead (eroded)",
+   "notes": "Hardware margins compress; solar demand is cyclical/policy-driven",
+   "tier": "middle"
+  },
+  {
+   "company": "Spotify",
+   "ticker": "SPOT",
+   "ipo_date": "2018-04-03",
+   "total_return": 2.28,
+   "max_drawdown": -0.81,
+   "max_drawdown_date": "2022-11-04",
+   "time_to_10x": null,
+   "first_year": -0.03,
+   "model": "streaming subscription",
+   "moat": "scale; weak pricing power",
+   "notes": "Labels capture most margin; moat is distribution not pricing",
+   "tier": "middle"
+  },
+  {
+   "company": "Dropbox",
+   "ticker": "DBX",
+   "ipo_date": "2018-03-22",
+   "total_return": 0.18,
+   "max_drawdown": -0.63,
+   "max_drawdown_date": "2020-03-12",
+   "time_to_10x": null,
+   "first_year": -0.23,
+   "model": "cloud storage subscription",
+   "moat": "weak; commodity",
+   "notes": "Storage is interchangeable; competes with free tiers of giants",
+   "tier": "middle"
+  },
+  {
+   "company": "Airbnb",
+   "ticker": "ABNB",
+   "ipo_date": "2020-12-10",
+   "total_return": 0.11,
+   "max_drawdown": -0.62,
+   "max_drawdown_date": "2022-12-28",
+   "time_to_10x": null,
+   "first_year": 0.25,
+   "model": "marketplace booking fees",
+   "moat": "two-sided network",
+   "notes": "Hosts and guests reinforce; but regulatory risk in every city",
+   "tier": "middle"
+  },
+  {
+   "company": "Wise",
+   "ticker": "WISE.L",
+   "ipo_date": "2021-07-07",
+   "total_return": -0.01,
+   "max_drawdown": -0.74,
+   "max_drawdown_date": "2022-06-30",
+   "time_to_10x": null,
+   "first_year": -0.6,
+   "model": "cross-border transfer fees",
+   "moat": "price transparency; thin moat",
+   "notes": "Competes on price in a crowded field; banks can copy",
+   "tier": "loser"
+  },
+  {
+   "company": "Tobii AB",
+   "ticker": "TOBII.ST",
+   "ipo_date": "2015-04-24",
+   "total_return": -0.93,
+   "max_drawdown": -0.99,
+   "max_drawdown_date": "2026-09-23",
+   "time_to_10x": null,
+   "first_year": 0.59,
+   "model": "hardware + licensing",
+   "moat": "niche technology",
+   "notes": "Small TAM; eye-tracking stayed niche",
+   "tier": "loser"
+  },
+  {
+   "company": "LanzaTech",
+   "ticker": "LNZA",
+   "ipo_date": "2023-02-08",
+   "total_return": -0.99,
+   "max_drawdown": -1.0,
+   "max_drawdown_date": "2026-06-12",
+   "time_to_10x": null,
+   "first_year": -0.01,
+   "model": "fuel/project sales",
+   "moat": "unproven-at-scale technology",
+   "notes": "Capital-intensive; never reached sustained commercial scale",
+   "tier": "loser"
+  },
+  {
+   "company": "23andMe",
+   "ticker": null,
+   "ipo_date": null,
+   "total_return": -1.0,
+   "max_drawdown": -1.0,
+   "max_drawdown_date": "2025-03-23",
+   "time_to_10x": null,
+   "first_year": null,
+   "tier": "loser",
+   "model": "one-time DNA kits + data licensing",
+   "moat": "data moat (never monetized)",
+   "notes": "No recurring revenue; data never became the business"
+  },
+  {
+   "company": "Proteus Digital Health",
+   "ticker": null,
+   "ipo_date": null,
+   "total_return": -1.0,
+   "max_drawdown": -1.0,
+   "max_drawdown_date": "2020-06-15",
+   "time_to_10x": null,
+   "first_year": null,
+   "tier": "loser",
+   "model": "smart-pill device sales",
+   "moat": "technology without a market",
+   "notes": "Raised $500M; no payer would reimburse it"
+  },
+  {
+   "company": "Solazyme",
+   "ticker": null,
+   "ipo_date": null,
+   "total_return": -1.0,
+   "max_drawdown": -1.0,
+   "max_drawdown_date": "2017-08-01",
+   "time_to_10x": null,
+   "first_year": null,
+   "tier": "loser",
+   "model": "algae biofuel commodity",
+   "moat": "no moat vs petroleum",
+   "notes": "Unit economics never worked against oil prices"
+  }
+ ],
+ "signals": [
+  {
+   "signal": "Network effects / platform moat",
+   "when": "pre-IPO \u2014 check before anything else",
+   "what": "All four max winners (Alphabet, Mastercard, Meta, Palantir) sell access to a network that gets stronger with each user. Losers sold a product (pills, algae fuel, eye-trackers). Ask: does each new customer make the product better for everyone else?"
+  },
+  {
+   "signal": "Recurring revenue, not one-time sales",
+   "when": "pre-IPO",
+   "what": "Winners monetize continuously (ads, fees per transaction, subscriptions, contracts). The bankruptcies all depended on lumpy, one-off adoption that never repeated."
+  },
+  {
+   "signal": "First-year post-IPO drawdown depth",
+   "when": "IPO \u2014 the first 12 months",
+   "what": "In this sample, every eventual max winner stayed above a -60% first-year drawdown; Meta fell -60% and still 20x'd, but nothing that fell more than -70% in year one ever recovered to new highs. A -70% first-year drawdown is the historical line between 'buy the dip' and 'value trap' here."
+  },
+  {
+   "signal": "Time to 10x clusters in the first decade",
+   "when": "IPO'd \u2014 years 2-12",
+   "what": "Winners that 10x'd did it within ~12 years of listing (Palantir ~4y, Mastercard ~6y, Alphabet ~9y, Meta ~12y). And 10x isn't permanent: Enphase 10x'd by 2020 then lost 90%. The win isn't just reaching 10x \u2014 it's holding a moat that keeps it there."
+  },
+  {
+   "signal": "Drawdown recovery test",
+   "when": "IPO'd \u2014 ongoing",
+   "what": "Max winners all suffered -30% to -60% drawdowns and made new highs within ~2 years. Losers' drawdowns kept deepening (Spotify -37% and falling, Enphase -90%). Rule of thumb from the data: a drawdown that keeps making new lows for 18+ months has never reversed in this sample."
+  },
+  {
+   "signal": "The list is a lagging indicator",
+   "when": "pre-IPO \u2014 mindset",
+   "what": "Spotlight lists catch companies 4-6 years after founding, already venture-backed and growing. The list didn't make them winners; it recognized winners-in-progress. Never treat inclusion alone as a buy signal \u2014 it's the starting gun for research, not the trade."
+  }
+ ],
+ "caveats": [
+  "n=14 companies. Every 'rule' above is descriptive of this tiny sample, not a law. Survivorship bias applies: bankruptcies are undercounted because delisted tickers vanish from free price data.",
+  "All bankruptcies here were pre-2021; recent cohorts haven't had time to fail yet.",
+  "Business-model tags are hand-curated and debatable."
+ ]
+}

@@ -94,6 +94,7 @@
       <button class="tab" role="tab" data-tab="graded">Graded Pipeline <span class="tab-tag"> · </span></button>
       <button class="tab" role="tab" data-tab="leaderboard">List Leaderboard</button>
       <button class="tab" role="tab" data-tab="ipo">IPO'd Alumni</button>
+      <button class="tab" role="tab" data-tab="playbook">Winner's Playbook</button>
       <button class="tab" role="tab" data-tab="methodology">Methodology <span class="tab-tag"> · </span></button>
       <button class="tab" role="tab" data-tab="lineage">System &amp; Data Lineage</button>
     </div>
@@ -166,6 +167,18 @@
         <span class="card-sub">Spotlight-list companies that went public years ago: years public, lifetime returns vs the S&P 500, current drawdown, momentum, a 12-month setup read, latest headlines, and industry context. Prices update when the fetcher runs; news refreshes weekly. Not investment advice — backward-looking research.</span>
       </div>
       <div id="ipo-grid" class="ipo-grid"></div>
+    </div>
+
+    <!-- Winner's Playbook: what separated winners from losers -->
+    <div class="tab-panel" id="tab-playbook" role="tabpanel">
+      <div class="card-head" style="margin-bottom:1rem">
+        <h2>Winner's Playbook</h2>
+        <span class="card-sub">14 spotlight alumni sorted by lifetime outcome, with the signals that separated them — written so someone with no experience can check any pre-IPO, IPO, or IPO'd company against them. Every pattern below is descriptive of this small sample, not a guarantee. Not investment advice.</span>
+      </div>
+      <div id="playbook-tiers" class="ipo-grid" style="margin-bottom:1.5rem"></div>
+      <h3 style="margin-bottom:0.8rem">The signals — when to check what</h3>
+      <div id="playbook-signals"></div>
+      <div class="ipo-outlook" style="margin-top:1.2rem"><span class="t">Honest caveats</span><ul id="playbook-caveats" style="margin:0.4rem 0 0 1rem; padding:0; font-size:0.85rem"></ul></div>
     </div>
 
     <!-- Methodology view (Graded, 2nd tab) -->

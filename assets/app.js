@@ -374,6 +374,54 @@
     grid.appendChild(frag);
   }
 
+  // ---- Winner's Playbook ----
+  function renderPlaybook() {
+    const pb = D.playbook || {};
+    const tiersEl = $('#playbook-tiers'); if (!tiersEl) return;
+    const order = [['max winner', 'Max winners'], ['middle', 'Middle class'], ['loser', 'Losers']];
+    const tierDesc = {
+      'max winner': '10x or more since IPO. The ones that made the lists famous.',
+      'middle': 'Survived and stayed positive, but never broke out.',
+      'loser': 'Negative lifetime returns — or bankrupt.',
+    };
+    tiersEl.innerHTML = '';
+    const frag = document.createDocumentFragment();
+    order.forEach(([key, label]) => {
+      const t = (pb.tiers || {})[key]; if (!t) return;
+      const card = document.createElement('div');
+      card.className = 'ipo-card';
+      const co = t.companies.map(c => {
+        const a = (pb.alumni || []).find(x => x.company === c);
+        const r = a && a.total_return != null ? ` <span class="${a.total_return >= 0 ? 'pos' : 'neg'}" style="font-weight:600">${a.total_return >= 0 ? '+' : ''}${Math.round(a.total_return * 100)}%</span>` : '';
+        return `<li>${esc(c)}${r}${a && a.model ? ` <span class="muted" style="font-size:0.78rem">· ${esc(a.model)}</span>` : ''}</li>`;
+      }).join('');
+      card.innerHTML = `
+        <div class="ipo-head"><span class="ipo-name">${label}</span><span class="ipo-years">${t.count} companies</span></div>
+        <p class="muted" style="font-size:0.85rem;margin:0 0 0.6rem">${tierDesc[key]}</p>
+        <ul style="list-style:none;margin:0;padding:0;font-size:0.88rem">${co}</ul>
+        <div class="ipo-stats" style="margin-top:0.7rem">
+          <div class="ipo-stat"><span class="k">Avg worst drawdown</span><span class="v">${t.avg_max_drawdown != null ? Math.round(t.avg_max_drawdown * 100) + '%' : '—'}</span></div>
+          <div class="ipo-stat"><span class="k">Avg first year</span><span class="v">${t.avg_first_year != null ? (t.avg_first_year >= 0 ? '+' : '') + Math.round(t.avg_first_year * 100) + '%' : '—'}</span></div>
+        </div>
+        <div style="font-size:0.82rem"><span class="k muted">Common moats: </span>${(t.common_moats || []).slice(0, 3).map(m => esc(m[0])).join(' · ') || '—'}</div>
+      `;
+      frag.appendChild(card);
+    });
+    tiersEl.appendChild(frag);
+
+    const sigEl = $('#playbook-signals');
+    if (sigEl) {
+      sigEl.innerHTML = (pb.signals || []).map((s, i) => `
+        <div class="ipo-card" style="margin-bottom:0.8rem">
+          <div class="ipo-head"><span class="ipo-name" style="font-size:1.05rem">${i + 1}. ${esc(s.signal)}</span>
+          <span class="spot-badge">${esc(s.when)}</span></div>
+          <p style="font-size:0.9rem;margin:0.3rem 0 0;line-height:1.5">${esc(s.what)}</p>
+        </div>`).join('');
+    }
+    const cavEl = $('#playbook-caveats');
+    if (cavEl) cavEl.innerHTML = (pb.caveats || []).map(c => `<li>${esc(c)}</li>`).join('');
+  }
+
   // ---- Disclaimer dismiss ----
   const dclose = $('#disclaimer-close');
   if (dclose) dclose.addEventListener('click', () => { const b = $('#disclaimer-banner'); if (b) b.style.display = 'none'; });
@@ -383,6 +431,7 @@
   renderLineage();
   renderLeaderboard();
   renderIPO();
+  renderPlaybook();
   renderEventLegend();
   rebuildCharts();
   refresh();

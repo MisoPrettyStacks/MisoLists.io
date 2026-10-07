@@ -539,11 +539,17 @@ def main(folder=DEFAULT_FOLDER):
     if os.path.exists(news_path):
         with open(news_path, encoding="utf-8") as f:
             news_bundle = json.load(f)
+    playbook = {}
+    playbook_path = os.path.join(BASE, "results", "playbook.json")
+    if os.path.exists(playbook_path):
+        with open(playbook_path, encoding="utf-8") as f:
+            playbook = json.load(f)
     payload = {
         "generated_at": ts, "headers": headers, "companies": merged, "count": len(merged),
         "lists": lists_meta,
         "seasoned": seasoned,
         "news": news_bundle,
+        "playbook": playbook,
         "quarantined_count": len(quarantined),
         "quarantined_sample": [{"company": q["company"], "reason": q["reason"]} for q in quarantined[:25]],
         "methodology": meth_lines, "colored_summary": colored_sum or [],
