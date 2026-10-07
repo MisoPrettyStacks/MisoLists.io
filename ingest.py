@@ -250,6 +250,79 @@ def load_outcomes():
             }
     return out
 
+def apply_historical_alumni(merged):
+    """Inject verified historical list alumni (data/historical_alumni.csv).
+    Upgrades existing rows (cohort year, verified flag, outcome) or adds
+    new verified rows. This is how the 'which lists pick winners' leaderboard
+    gets its denominator of known historical alumni."""
+    path = os.path.join(BASE, "data", "historical_alumni.csv")
+    if not os.path.exists(path):
+        return merged
+    import csv
+    by_norm = {}
+    for m in merged:
+        by_norm.setdefault(norm_name(m["company"]), m)
+    added = 0
+    with open(path, newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            name = (row.get("company") or "").strip()
+            if not name:
+                continue
+            nm = norm_name(name)
+            lid = (row.get("list_id") or "").strip() or None
+            cy = row.get("cohort_year") or ""
+            cy = int(cy) if cy.strip().isdigit() else None
+            outcome = (row.get("outcome") or "").strip().lower() or None
+            oy = row.get("outcome_year") or ""
+            oy = int(oy) if oy.strip().isdigit() else None
+            ticker = (row.get("ticker") or "").strip() or None
+            src = (row.get("source_url") or "").strip() or None
+            notes = (row.get("notes") or "").strip() or None
+            existing = by_norm.get(nm)
+            if existing:
+                # upgrade: real cohort year + verified + outcome
+                if cy and not existing.get("cohort_year"):
+                    existing["cohort_year"] = cy
+                existing["verified"] = 1
+                if lid and lid not in (existing.get("list_ids") or []):
+                    existing["list_ids"] = sorted(set((existing.get("list_ids") or []) + [lid]))
+                    existing["spotlight_count"] = len(existing["list_ids"])
+                    if not existing.get("source_url"):
+                        existing["source_url"] = LIST_URLS.get(lid)
+                if outcome and not existing.get("outcome"):
+                    existing["outcome"] = outcome
+                    existing["outcome_year"] = oy
+                    existing["ticker"] = ticker
+                    existing["outcome_source"] = src
+                if notes:
+                    existing["notes"] = (existing.get("notes") + " | " + notes) if existing.get("notes") else notes
+            else:
+                rec = {
+                    "company": name, "primary_event": None, "thematic_probability": None,
+                    "category": "Historical Alumni", "funding_stage": None, "ipo_date": None,
+                    "sector": None, "source": f"{LIST_NAMES.get(lid, lid)} (historical alumni, verified)" if lid else "Historical alumni (verified)",
+                    "notes": notes, "historical_flag": "Yes",
+                    "stage_score": None, "financial_score": None, "capital_score": None,
+                    "market_score": None, "risk_adj": None, "total_score": None, "grade": None,
+                    "stage_rationale": None, "financial_rationale": None, "capital_rationale": None,
+                    "market_rationale": None, "risk_rationale": None,
+                    "list_id": lid, "cohort_year": cy,
+                    "source_url": LIST_URLS.get(lid) if lid else None,
+                    "spotlight_count": 1, "verified": 1,
+                    "list_ids": [lid] if lid else [],
+                    "all_sources": src or "",
+                    "outcome": outcome, "outcome_year": oy, "ticker": ticker,
+                    "outcome_source": src,
+                }
+                merged.append(rec)
+                by_norm[nm] = rec
+                added += 1
+    if added:
+        print(f"[ingest] historical alumni: upgraded {len([r for r in merged if r.get('historical_flag')=='Yes'])} rows, added {added} new")
+    # re-sort: scored rows first, then historical
+    merged.sort(key=lambda x: (x.get("total_score") if x.get("total_score") is not None else -999), reverse=True)
+    return merged
+
 def prob_num(p):
     if not p: return None
     m = re.match(r"(\d+(?:\.\d+)?)", str(p))
@@ -348,7 +421,7 @@ def main(folder=DEFAULT_FOLDER):
     c = db.cursor()
     # schema migration: rebuild tables when the data-quality columns are missing
     cols_now = [r[1] for r in c.execute("PRAGMA table_info(pipeline)").fetchall()]
-    if cols_now and ("list_id" not in cols_now or "outcome" not in cols_now):
+    if cols_now and ("list_id" not in cols_now or "outcome" not in cols_now or "first_seen" not in cols_now):
         print("[ingest] migrating pipeline schema (adding list/outcome columns)...")
         c.execute("DROP TABLE IF EXISTS pipeline")
         c.execute("DROP TABLE IF EXISTS quarantine")
@@ -359,7 +432,8 @@ def main(folder=DEFAULT_FOLDER):
         market_score REAL, risk_adj REAL, total_score REAL, grade TEXT, stage_rationale TEXT, financial_rationale TEXT, capital_rationale TEXT,
         market_rationale TEXT, risk_rationale TEXT, list_id TEXT, cohort_year INT, source_url TEXT,
         spotlight_count INT DEFAULT 1, verified INT DEFAULT 0, all_sources TEXT,
-        outcome TEXT, outcome_year INT, ticker TEXT, outcome_source TEXT, ingested_at TEXT);
+        outcome TEXT, outcome_year INT, ticker TEXT, outcome_source TEXT,
+        first_seen TEXT, ingested_at TEXT);
       CREATE TABLE IF NOT EXISTS quarantine (company TEXT, reason TEXT, source TEXT, ingested_at TEXT);
       CREATE TABLE IF NOT EXISTS methodology (file TEXT, line TEXT);
     """)
@@ -406,7 +480,22 @@ def main(folder=DEFAULT_FOLDER):
     orgs_readme = orgs.get("README") if orgs else None
 
     merged, quarantined = build_pipeline(colored_rowsets, graded_rowsets) if colored_rowsets else ([], [])
+    merged = apply_historical_alumni(merged)
+    # first-seen tracking (survives rebuilds) for NEW badges
+    db.execute("CREATE TABLE IF NOT EXISTS first_seen (norm TEXT PRIMARY KEY, first_seen TEXT)")
+    table_was_empty = db.execute("SELECT COUNT(*) FROM first_seen").fetchone()[0] == 0
     for m in merged:
+        nm = norm_name(m["company"])
+        row = db.execute("SELECT first_seen FROM first_seen WHERE norm=?", (nm,)).fetchone()
+        if row:
+            m["first_seen"] = row[0]
+        else:
+            # On the very first run, everything already in the DB is
+            # established (not new) — backdate so only future discoveries
+            # get NEW badges.
+            m["first_seen"] = "2020-01-01T00:00:00+00:00" if table_was_empty else ts
+            db.execute("INSERT OR IGNORE INTO first_seen(norm, first_seen) VALUES(?,?)", (nm, m["first_seen"]))
+        m["ingested_at"] = ts
         row = dict(m); row.pop("list_ids", None)
         cols = [k for k in row.keys()]
         c.execute("INSERT INTO pipeline (" + ",".join(cols) + ",ingested_at) VALUES (" + ",".join(["?"] * len(cols)) + ",?)",

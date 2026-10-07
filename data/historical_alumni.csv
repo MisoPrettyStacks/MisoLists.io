@@ -1,0 +1,18 @@
+company,list_id,cohort_year,outcome,outcome_year,ticker,source_url,notes
+Alphabet (Google),wef_tech_pioneers,2002,ipo,2004,GOOGL,https://www.weforum.org/press/2014/08/world-economic-forum-recognizes-24-leading-technology-pioneers/,WEF Tech Pioneer 2002; IPO Aug 2004
+Twitter,wef_tech_pioneers,2010,acquired,2022,,https://www.weforum.org/press/2014/08/world-economic-forum-recognizes-24-leading-technology-pioneers/,WEF Tech Pioneer 2010; acquired by Musk Oct 2022 for $44B
+Palantir,wef_tech_pioneers,2010,ipo,2020,PLTR,https://suade.org/suade-recognised-as-technology-pioneer-by-world-economic-forum/,WEF Tech Pioneer 2010; direct listing Sep 2020
+Spotify,wef_tech_pioneers,2011,ipo,2018,SPOT,https://www.weforum.org/press/2014/08/world-economic-forum-recognizes-24-leading-technology-pioneers/,WEF Tech Pioneer 2011; direct listing Apr 2018
+Dropbox,wef_tech_pioneers,2012,ipo,2018,DBX,https://www.weforum.org/press/2014/08/world-economic-forum-recognizes-24-leading-technology-pioneers/,WEF Tech Pioneer 2012; IPO Mar 2018
+Kickstarter,wef_tech_pioneers,2012,operating,,,https://www.weforum.org/press/2014/08/world-economic-forum-recognizes-24-leading-technology-pioneers/,WEF Tech Pioneer 2012; still private PBC
+Solazyme,wef_tech_pioneers,2012,defunct,2017,,https://cen.acs.org/articles/95/web/2017/08/Algae-products-specialist-TerraVia-goes-bankrupt.html,WEF Tech Pioneer 2012; bankrupt Aug 2017 as TerraVia
+Airbnb,wef_tech_pioneers,2014,ipo,2020,ABNB,https://www.weforum.org/press/2014/08/world-economic-forum-recognizes-24-leading-technology-pioneers/,WEF Tech Pioneer 2014; IPO Dec 2020
+Nest Labs,wef_tech_pioneers,2014,acquired,2014,,https://www.weforum.org/press/2014/08/world-economic-forum-recognizes-24-leading-technology-pioneers/,WEF Tech Pioneer 2014; acquired by Google Jan 2014 for $3.2B
+Wise (TransferWise),wef_tech_pioneers,2015,ipo,2021,WISE,https://suade.org/suade-recognised-as-technology-pioneer-by-world-economic-forum/,WEF Tech Pioneer 2015; direct listing Jul 2021 LSE
+23andMe,wef_tech_pioneers,2008,defunct,2025,,https://www.biospace.com/article/releases/23andme-inc-and-mondobiotech-partner-to-advance-research-of-rare-diseases-/,WEF Tech Pioneer 2008; Chapter 11 Mar 2025
+Proteus Digital Health,wef_tech_pioneers,2009,defunct,2020,,https://www.weforum.org/press/2014/08/world-economic-forum-recognizes-24-leading-technology-pioneers/,WEF Tech Pioneer 2009; Chapter 11 Jun 2020
+Mozilla Corporation,wef_tech_pioneers,2007,operating,,,https://www.weforum.org/press/2014/08/world-economic-forum-recognizes-24-leading-technology-pioneers/,WEF Tech Pioneer 2007; nonprofit
+Wikimedia Foundation,wef_tech_pioneers,2008,operating,,,https://www.weforum.org/press/2014/08/world-economic-forum-recognizes-24-leading-technology-pioneers/,WEF Tech Pioneer 2008; nonprofit
+Meta,mit_tr35,,ipo,2012,META,https://pr.millcreekjournal.com/article/MIT-Technology-Review-Introduces-the-35-Innovators-Under-35-for-2025/68bf5d457dff95573a3416dc,MIT TR35 honoree (Zuckerberg); IPO May 2012
+Tumblr,mit_tr35,,acquired,2013,,https://pr.millcreekjournal.com/article/MIT-Technology-Review-Introduces-the-35-Innovators-Under-35-for-2025/68bf5d457dff95573a3416dc,MIT TR35 honoree (David Karp); acquired by Yahoo 2013 for $1.1B
+iRobot,mit_tr35,,ipo,2003,IRBT,https://pr.millcreekjournal.com/article/MIT-Technology-Review-Introduces-the-35-Innovators-Under-35-for-2025/68bf5d457dff95573a3416dc,MIT TR35 honoree (Helen Greiner); IPO 2003

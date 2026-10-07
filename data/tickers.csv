@@ -1,0 +1,11 @@
+company,ticker,note
+S&P 500,^GSPC,Market benchmark for event study
+Spotify,SPOT,NYSE direct listing 2018
+Airbnb,ABNB,Nasdaq IPO 2020
+Wise,WISE.L,LSE direct listing 2021 (Yahoo suffix .L)
+Alphabet,GOOGL,Nasdaq IPO 2004
+Palantir,PLTR,NYSE direct listing 2020
+Dropbox,DBX,Nasdaq IPO 2018
+Meta,META,Nasdaq IPO 2012
+iRobot,IRBT,Nasdaq IPO 2003
+Enphase Energy,ENPH,Nasdaq IPO 2010

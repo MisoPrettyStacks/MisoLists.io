@@ -1,0 +1,29 @@
+company,event_type,event_date,date_precision,ticker_at_event,date_source,notes
+Alphabet,spotlight,2002-06-15,approx,GOOGL,WEF 2014 press release (year only),WEF Tech Pioneer 2002; announcement typically mid-year
+Alphabet,ipo,2004-08-19,exact,GOOGL,xda-developers.com IPO retrospective,IPO at $85
+Twitter,spotlight,2010-06-15,approx,TWTR,WEF 2014 press release (year only),WEF Tech Pioneer 2010
+Twitter,ipo,2013-11-07,exact,TWTR,kiplinger.com,IPO at $26
+Twitter,acquired,2022-10-27,exact,TWTR,everything-pr.com timeline,Musk buyout $54.20/share; delisted
+Palantir,spotlight,2010-06-15,approx,PLTR,Suade press release quoting WEF (year only),WEF Tech Pioneer 2010
+Palantir,ipo,2020-09-30,exact,PLTR,fool.com,Direct listing ref $7.25
+Spotify,spotlight,2011-06-15,approx,SPOT,WEF 2014 press release (year only),WEF Tech Pioneer 2011
+Spotify,ipo,2018-04-03,exact,SPOT,reuters.com,Direct listing ref $132
+Dropbox,spotlight,2012-06-15,approx,DBX,WEF 2014 press release (year only),WEF Tech Pioneer 2012
+Dropbox,ipo,2018-03-22,exact,DBX,pitchbook.com,IPO at $21
+Airbnb,spotlight,2014-06-15,approx,ABNB,WEF 2014 press release (year only),WEF Tech Pioneer 2014
+Airbnb,ipo,2020-12-10,exact,ABNB,techstartups.com,IPO at $68
+Nest Labs,spotlight,2014-06-15,approx,,WEF 2014 press release (year only),WEF Tech Pioneer 2014; acquired before IPO so no ticker
+Nest Labs,acquired,2014-01-13,approx,,entrepreneur.com,Acquired by Google for $3.2B cash (Jan 2014)
+Wise,spotlight,2015-06-15,approx,WISE.L,Suade press release quoting WEF (year only),WEF Tech Pioneer 2015
+Wise,ipo,2021-07-07,exact,WISE.L,ibsintelligence.com,Direct listing opened 800p
+23andMe,spotlight,2008-06-15,approx,,BioSpace/PRNewswire Jan 2009 (year only),WEF Tech Pioneer 2008
+23andMe,ipo,2021-06-16,approx,,techcrunch.com,SPAC merger closed Jun 2021 at $3.5B
+23andMe,defunct,2025-03-23,exact,,elevenflo.com,Chapter 11 filing
+Proteus Digital Health,spotlight,2009-06-15,approx,,WEF 2014 press release (year only),WEF Tech Pioneer 2009; never went public
+Proteus Digital Health,defunct,2020-06-15,exact,,fiercehealthcare.com,Chapter 11 Jun 2020
+Solazyme,spotlight,2012-06-15,approx,,WEF 2014 press release (year only),WEF Tech Pioneer 2012
+Solazyme,defunct,2017-08-01,approx,,cen.acs.org,Chapter 11 Aug 2017 as TerraVia
+Meta,ipo,2012-05-18,exact,META,widely reported,IPO at $38 (MIT TR35 via Zuckerberg)
+Tumblr,acquired,2013-05-20,approx,,widely reported,Acquired by Yahoo for $1.1B (MIT TR35 via Karp)
+iRobot,ipo,2003-11-12,approx,IRBT,widely reported,IPO 2003 (MIT TR35 via Greiner)
+Enphase Energy,ipo,2010-01-01,approx,ENPH,outcomes.csv,IPO 2010 exact date to be verified

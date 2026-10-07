@@ -17,10 +17,32 @@ normalizes, scores, and publishes them to a live executive dashboard.
 1. **Ingestion** — `ingest.py` SHA-256 dedupes every file in `reports/`,
    parses Excel + PDF, normalizes and merges the two tracker views by company,
    and rebuilds the SQLite database (`data.db`) with full source lineage.
-2. **Dashboard data** — regenerates `assets/data.js`, the data bundle the
-   static dashboard reads.
-3. **Publishing** — GitHub Actions commits the regenerated data and rebuilds
+2. **Data-quality filter** — junk rows are quarantined, not silently kept:
+   non-company sources (country/city rankings, project portfolios), cookie
+   names, localStorage keys, nav boilerplate, and cookie-consent dialog text
+   scraped as fake "companies" all go to a `quarantine` table (auditable,
+   excluded from the dashboard). 2026-10-06 audit cut 402 → 277 entities.
+3. **Cross-list entity resolution** — the same company on N independent lists
+   merges into one record with `spotlight_count=N`. Appearing on multiple
+   independent lists is the core signal: the quantified version of the
+   "spotlight lists pick winners" thesis.
+4. **Dashboard data** — regenerates `assets/data.js`, the data bundle the
+   static dashboard reads. Includes per-list metadata (`lists`), quarantine
+   stats, and outcome hit-rates.
+5. **Publishing** — GitHub Actions commits the regenerated data and rebuilds
    GitHub Pages. The live site updates automatically.
+
+## Dashboard features
+
+- **Browse by list** — filter the whole pipeline to any single spotlight list
+- **Verified only** — hide auto-discovered rows, show hand-researched ones
+- **Spotlight count** — badge on every company showing how many independent
+  lists feature it (the core signal)
+- **List Leaderboard** — ranks every list by hit rate: share of its companies
+  with a verified big outcome (unicorn / IPO / acquisition)
+- **Outcome tracking** — hand-curated in `data/outcomes.csv`
+  (`company,outcome,outcome_year,peak_valuation_usd,ticker,source_url,notes`);
+  add rows there to grow the leaderboard. Tickers feed the price-action study.
 
 ## Autonomous triggers
 
@@ -28,6 +50,10 @@ normalizes, scores, and publishes them to a live executive dashboard.
 - on every push that changes `reports/**` (new report lands → instant update),
 - daily on a schedule (re-ingest cadence),
 - on manual dispatch.
+
+`.github/workflows/enrich.yml` runs `scripts/enrich.py` weekly: free Wikidata
+lookups (no API key) for founded year, country, industry, website per company.
+Match confidence is recorded (`p31` > `desc` > `fallback`).
 
 Everything runs on GitHub's free tier — no server, no credits, no maintenance.
 

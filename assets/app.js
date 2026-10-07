@@ -137,9 +137,11 @@
       const spot = c.spotlight_count || 1;
       const spotTitle = (c.list_ids || []).map(id => { const l = (D.lists || []).find(x => x.id === id); return l ? l.name : id; }).join(', ') || 'single list';
       const ocBadge = c.outcome ? `<span class="spot-badge" title="${esc((c.outcome || '').toUpperCase() + (c.outcome_year ? ' ' + c.outcome_year : '') + (c.ticker ? ' · ' + c.ticker : ''))}">${esc(c.outcome.toUpperCase())}</span> ` : '';
+      let newBadge = '';
+      try { if (c.first_seen && (Date.now() - new Date(c.first_seen).getTime()) < 14 * 864e5) newBadge = ' <span class="spot-badge hot" title="Added to the pipeline in the last 14 days">NEW</span>'; } catch {}
       const bar = (v, mx) => { const n = num(v); if (n==null) return '<span class="muted">—</span>'; const pct = Math.max(0, Math.min(100, Math.abs(n)/mx*100)); const neg = n<0; return `<div class="score-bar"><div class="score-track"><div class="score-fill" style="width:${pct}%;${neg?'background:var(--grade-d-fg)':''}"></div></div><span class="score-val">${n}</span></div>`; };
       tr.innerHTML = `
-        <td>${ocBadge}${esc(c.company)}</td>
+        <td>${ocBadge}${esc(c.company)}${newBadge}</td>
         <td>${c.grade?`<span class="grade-badge grade-${c.grade}">${c.grade}</span>`:'—'}</td>
         <td class="num">${total!=null?total:'—'}</td>
         <td><span class="spot-badge${spot>1?' hot':''}" title="${esc(spotTitle)}">${spot}</span></td>
