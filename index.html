@@ -92,6 +92,7 @@
     <div class="tabbar" role="tablist">
       <button class="tab active" role="tab" data-tab="colored">Master Pipeline Tracker</button>
       <button class="tab" role="tab" data-tab="graded">Graded Pipeline <span class="tab-tag"> · </span></button>
+      <button class="tab" role="tab" data-tab="leaderboard">List Leaderboard</button>
       <button class="tab" role="tab" data-tab="methodology">Methodology <span class="tab-tag"> · </span></button>
       <button class="tab" role="tab" data-tab="lineage">System &amp; Data Lineage</button>
     </div>
@@ -135,6 +136,22 @@
         <table class="data-table" id="table-graded">
           <thead><tr>
             <th>Company</th><th>Grade</th><th>Total</th><th title="Number of independent spotlight lists featuring this company">Lists</th><th>Stage</th><th>Financial</th><th>Capital</th><th>Market</th><th>Risk</th><th>Sector</th><th>Stage Rationale</th><th>Financial Rationale</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Leaderboard view: which lists actually pick winners -->
+    <div class="tab-panel" id="tab-leaderboard" role="tabpanel">
+      <div class="card-head" style="margin-bottom:1rem">
+        <h2>Which lists pick winners?</h2>
+        <span class="card-sub">Hit rate = share of a list's companies with a verified big outcome (unicorn, IPO, or acquisition). Outcomes are hand-curated in <code>data/outcomes.csv</code> — add rows there to grow this board. Small samples lie: treat lists with few tracked companies accordingly.</span>
+      </div>
+      <div class="table-scroll">
+        <table class="data-table" id="table-leaderboard">
+          <thead><tr>
+            <th>#</th><th>List</th><th>Companies tracked</th><th>Big outcomes</th><th>Hit rate</th><th></th>
           </tr></thead>
           <tbody></tbody>
         </table>

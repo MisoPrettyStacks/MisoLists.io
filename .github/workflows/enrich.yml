@@ -1,0 +1,49 @@
+name: Wikidata Enrichment
+
+# Weekly enrichment of pipeline companies via Wikidata (free, no API key).
+# Fills founded year, country, industry, website. Conservative matching;
+# match_signal records how confident each match is (p31 > desc > fallback).
+
+on:
+  schedule:
+    # Weekly, Tuesdays 15:30 UTC (08:30 PT) — after Monday's source scan
+    - cron: "30 15 * * 2"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: enrich
+  cancel-in-progress: false
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run enrichment
+        run: python3 scripts/enrich.py
+
+      - name: Commit enrichment DB
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.db
+          if git diff --staged --quiet; then
+            echo "No new enrichment data."
+          else
+            git commit -m "chore(data): weekly wikidata enrichment"
+            git push
+          fi

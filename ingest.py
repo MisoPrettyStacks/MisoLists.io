@@ -122,6 +122,7 @@ LIST_PATTERNS = [
     ("cbinsights_ai100", ["CB Insights", "AI 100"]),
     ("xprize", ["XPRIZE", "Xprize"]),
     ("hello_tomorrow", ["Hello Tomorrow"]),
+    ("eic_accelerator", ["EIC Accelerator", "EIC"]),
 ]
 
 LIST_URLS = {
@@ -139,6 +140,14 @@ LIST_URLS = {
     "nato_diana": "https://www.diana.nato.int/",
     "g20_techsprint": "https://www.bis.org/about/bisih/topics/techsprint.htm",
     "eu_innovation_radar": "https://dealflow.eu/",
+    "forbes_30u30": "https://www.forbes.com/30-under-30/",
+    "mit_tr35": "https://www.technologyreview.com/innovators-under-35/",
+    "time100_next": "https://time.com/collection/time100-next/",
+    "fastco_mic": "https://www.fastcompany.com/most-innovative-companies/list",
+    "cbinsights_ai100": "https://www.cbinsights.com/research/artificial-intelligence-top-startups/",
+    "xprize": "https://www.xprize.org/prizes",
+    "hello_tomorrow": "https://hello-tomorrow.org/the-challenge/",
+    "eic_accelerator": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
 }
 
 LIST_NAMES = {
@@ -163,6 +172,7 @@ LIST_NAMES = {
     "cbinsights_ai100": "CB Insights AI 100",
     "xprize": "XPRIZE",
     "hello_tomorrow": "Hello Tomorrow",
+    "eic_accelerator": "EU EIC Accelerator",
 }
 
 CORP_SUFFIX_RE = re.compile(
@@ -216,6 +226,30 @@ def derive_cohort_year(source):
     m = re.search(r"\b(20\d\d|19\d\d)\b", s)
     return int(m.group(1)) if m else None
 
+def load_outcomes():
+    """Manual outcome curation: data/outcomes.csv keyed by normalized name.
+    Columns: company,outcome,outcome_year,peak_valuation_usd,ticker,source_url,notes
+    outcome in: unicorn | ipo | acquired | operating | defunct"""
+    path = os.path.join(BASE, "data", "outcomes.csv")
+    out = {}
+    if not os.path.exists(path):
+        return out
+    import csv
+    with open(path, newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            name = (row.get("company") or "").strip()
+            if not name:
+                continue
+            out[norm_name(name)] = {
+                "outcome": (row.get("outcome") or "").strip().lower(),
+                "outcome_year": int(row["outcome_year"]) if (row.get("outcome_year") or "").strip().isdigit() else None,
+                "peak_valuation_usd": float(row["peak_valuation_usd"]) if (row.get("peak_valuation_usd") or "").strip() else None,
+                "ticker": (row.get("ticker") or "").strip() or None,
+                "outcome_source": (row.get("source_url") or "").strip() or None,
+                "outcome_notes": (row.get("notes") or "").strip() or None,
+            }
+    return out
+
 def prob_num(p):
     if not p: return None
     m = re.match(r"(\d+(?:\.\d+)?)", str(p))
@@ -267,11 +301,21 @@ def build_pipeline(colored_rowsets, graded_rowsets):
     for rec in raw:
         groups.setdefault(rec["norm"] or rec["company"].strip().lower(), []).append(rec)
 
+    outcomes = load_outcomes()
     merged = []
     for norm, recs in groups.items():
         # best record = highest total_score (human-graded research beats auto rows)
         recs.sort(key=lambda x: (x.get("total_score") if x.get("total_score") is not None else -999), reverse=True)
         best = dict(recs[0])
+        oc = outcomes.get(norm)
+        if oc:
+            best["outcome"] = oc["outcome"]
+            best["outcome_year"] = oc["outcome_year"]
+            best["ticker"] = oc["ticker"]
+            best["outcome_source"] = oc["outcome_source"]
+        else:
+            best["outcome"] = None; best["outcome_year"] = None
+            best["ticker"] = None; best["outcome_source"] = None
         list_ids = [r["list_id"] for r in recs if r["list_id"]]
         sources = []
         for r in recs:
@@ -304,8 +348,8 @@ def main(folder=DEFAULT_FOLDER):
     c = db.cursor()
     # schema migration: rebuild tables when the data-quality columns are missing
     cols_now = [r[1] for r in c.execute("PRAGMA table_info(pipeline)").fetchall()]
-    if cols_now and "list_id" not in cols_now:
-        print("[ingest] migrating pipeline schema (adding list_id/cohort_year/spotlight columns)...")
+    if cols_now and ("list_id" not in cols_now or "outcome" not in cols_now):
+        print("[ingest] migrating pipeline schema (adding list/outcome columns)...")
         c.execute("DROP TABLE IF EXISTS pipeline")
         c.execute("DROP TABLE IF EXISTS quarantine")
     c.executescript("""
@@ -314,7 +358,8 @@ def main(folder=DEFAULT_FOLDER):
         ipo_date TEXT, sector TEXT, source TEXT, notes TEXT, historical_flag TEXT, stage_score REAL, financial_score REAL, capital_score REAL,
         market_score REAL, risk_adj REAL, total_score REAL, grade TEXT, stage_rationale TEXT, financial_rationale TEXT, capital_rationale TEXT,
         market_rationale TEXT, risk_rationale TEXT, list_id TEXT, cohort_year INT, source_url TEXT,
-        spotlight_count INT DEFAULT 1, verified INT DEFAULT 0, all_sources TEXT, ingested_at TEXT);
+        spotlight_count INT DEFAULT 1, verified INT DEFAULT 0, all_sources TEXT,
+        outcome TEXT, outcome_year INT, ticker TEXT, outcome_source TEXT, ingested_at TEXT);
       CREATE TABLE IF NOT EXISTS quarantine (company TEXT, reason TEXT, source TEXT, ingested_at TEXT);
       CREATE TABLE IF NOT EXISTS methodology (file TEXT, line TEXT);
     """)
@@ -379,12 +424,18 @@ def main(folder=DEFAULT_FOLDER):
     first_graded = next((r for r in graded_rowsets if r), [[]])
     headers = {"colored": first_colored[0] if first_colored else [], "graded": first_graded[0] if first_graded else []}
     # lists metadata for browse-by-list + spotlight counts
+    # + outcome hit-rate per list ("which lists pick winners")
     list_counts = {}
+    list_wins = {}
     for m in merged:
         for lid in (m.get("list_ids") or []):
             list_counts[lid] = list_counts.get(lid, 0) + 1
+            if (m.get("outcome") or "") in ("unicorn", "ipo", "acquired"):
+                list_wins[lid] = list_wins.get(lid, 0) + 1
     lists_meta = [
-        {"id": lid, "name": LIST_NAMES.get(lid, lid), "url": LIST_URLS.get(lid), "count": cnt}
+        {"id": lid, "name": LIST_NAMES.get(lid, lid), "url": LIST_URLS.get(lid),
+         "count": cnt, "wins": list_wins.get(lid, 0),
+         "hit_rate": round(list_wins.get(lid, 0) / cnt, 3) if cnt else 0}
         for lid, cnt in sorted(list_counts.items(), key=lambda x: -x[1])
     ]
     payload = {

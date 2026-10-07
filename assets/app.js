@@ -136,9 +136,10 @@
       const total = num(c.total_score);
       const spot = c.spotlight_count || 1;
       const spotTitle = (c.list_ids || []).map(id => { const l = (D.lists || []).find(x => x.id === id); return l ? l.name : id; }).join(', ') || 'single list';
+      const ocBadge = c.outcome ? `<span class="spot-badge" title="${esc((c.outcome || '').toUpperCase() + (c.outcome_year ? ' ' + c.outcome_year : '') + (c.ticker ? ' · ' + c.ticker : ''))}">${esc(c.outcome.toUpperCase())}</span> ` : '';
       const bar = (v, mx) => { const n = num(v); if (n==null) return '<span class="muted">—</span>'; const pct = Math.max(0, Math.min(100, Math.abs(n)/mx*100)); const neg = n<0; return `<div class="score-bar"><div class="score-track"><div class="score-fill" style="width:${pct}%;${neg?'background:var(--grade-d-fg)':''}"></div></div><span class="score-val">${n}</span></div>`; };
       tr.innerHTML = `
-        <td>${esc(c.company)}</td>
+        <td>${ocBadge}${esc(c.company)}</td>
         <td>${c.grade?`<span class="grade-badge grade-${c.grade}">${c.grade}</span>`:'—'}</td>
         <td class="num">${total!=null?total:'—'}</td>
         <td><span class="spot-badge${spot>1?' hot':''}" title="${esc(spotTitle)}">${spot}</span></td>
@@ -309,6 +310,29 @@
     wrap.innerHTML = codes.map(c => `<span class="leg-item"><span class="leg-code">${esc(c)}</span><span class="leg-desc">${esc(EVENT_MAP[c])}</span></span>`).join('');
   }
 
+  // ---- List leaderboard: which lists pick winners ----
+  function renderLeaderboard() {
+    const tb = $('#table-leaderboard tbody'); if (!tb) return; tb.innerHTML = '';
+    const lists = [...(D.lists || [])].sort((a, b) => (b.hit_rate - a.hit_rate) || (b.wins - a.wins));
+    if (!lists.length) { tb.innerHTML = '<tr><td colspan="6" class="muted" style="text-align:center;padding:2rem">No list data yet.</td></tr>'; return; }
+    const frag = document.createDocumentFragment();
+    lists.forEach((l, i) => {
+      const tr = document.createElement('tr');
+      const pct = Math.round(l.hit_rate * 100);
+      const barW = Math.min(100, pct * 4);
+      const link = l.url ? `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.name)}</a>` : esc(l.name);
+      tr.innerHTML = `
+        <td class="num">${i + 1}</td>
+        <td>${link}</td>
+        <td class="num">${l.count}</td>
+        <td class="num">${l.wins}</td>
+        <td class="num"><strong>${pct}%</strong></td>
+        <td><div class="score-bar"><div class="score-track"><div class="score-fill" style="width:${barW}%"></div></div></div></td>`;
+      frag.appendChild(tr);
+    });
+    tb.appendChild(frag);
+  }
+
   // ---- Disclaimer dismiss ----
   const dclose = $('#disclaimer-close');
   if (dclose) dclose.addEventListener('click', () => { const b = $('#disclaimer-banner'); if (b) b.style.display = 'none'; });
@@ -316,6 +340,7 @@
   // ---- Init ----
   renderMethodology();
   renderLineage();
+  renderLeaderboard();
   renderEventLegend();
   rebuildCharts();
   refresh();
