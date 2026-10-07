@@ -45,7 +45,7 @@
     <div class="kpi">
       <span class="kpi-label">Tracked Entities</span>
       <span class="kpi-value" id="kpi-total">—</span>
-      <span class="kpi-delta muted">across 5 source files</span>
+      <span class="kpi-delta muted">across <span id="kpi-files">—</span> source files</span>
     </div>
     <div class="kpi">
       <span class="kpi-label">Top Grade (A)</span>
@@ -103,8 +103,10 @@
         <input type="search" id="search" placeholder="Search company, sector, event, source…">
       </div>
       <select id="filter-grade" class="select"><option value="">All grades</option></select>
+      <select id="filter-list" class="select"><option value="">All lists</option></select>
       <select id="filter-sector" class="select"><option value="">All sectors</option></select>
       <select id="filter-event" class="select"><option value="">All themes</option></select>
+      <label class="check"><input type="checkbox" id="filter-verified"> Verified only</label>
       <div class="spacer"></div>
       <span class="result-count" id="result-count">—</span>
       <button class="btn-ghost" id="export-csv">Export CSV</button>
@@ -132,7 +134,7 @@
       <div class="table-scroll">
         <table class="data-table" id="table-graded">
           <thead><tr>
-            <th>Company</th><th>Grade</th><th>Total</th><th>Stage</th><th>Financial</th><th>Capital</th><th>Market</th><th>Risk</th><th>Sector</th><th>Stage Rationale</th><th>Financial Rationale</th>
+            <th>Company</th><th>Grade</th><th>Total</th><th title="Number of independent spotlight lists featuring this company">Lists</th><th>Stage</th><th>Financial</th><th>Capital</th><th>Market</th><th>Risk</th><th>Sector</th><th>Stage Rationale</th><th>Financial Rationale</th>
           </tr></thead>
           <tbody></tbody>
         </table>

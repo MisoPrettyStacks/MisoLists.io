@@ -54,6 +54,7 @@
   // ---- Header meta ----
   $('#refresh-time').textContent = D.generated_at ? new Date(D.generated_at).toLocaleString('en-US', { month:'short', day:'2-digit', hour:'2-digit', minute:'2-digit' }) : '—';
   $('#source-count').textContent = (D.lineage || []).length;
+  const kf = $('#kpi-files'); if (kf) kf.textContent = (D.lineage || []).length;
 
   // ---- KPIs ----
   const scores = companies.map(c => num(c.total_score)).filter(v => v != null).sort((a,b)=>a-b);
@@ -73,6 +74,8 @@
   const grades = ['A','B','C','D','F'].filter(g => companies.some(c => c.grade === g));
   const gradeSel = $('#filter-grade');
   grades.forEach(g => { const o = document.createElement('option'); o.value = g; o.textContent = 'Grade ' + g; gradeSel.appendChild(o); });
+  const listSel = $('#filter-list');
+  (D.lists || []).forEach(l => { const o = document.createElement('option'); o.value = l.id; o.textContent = `${l.name} (${l.count})`; listSel.appendChild(o); });
   const sectorSel = $('#filter-sector');
   sectors.sort().forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = s; sectorSel.appendChild(o); });
   const events = [...new Set(companies.map(c => c.primary_event).filter(Boolean))].sort();
@@ -82,12 +85,15 @@
   function filtered() {
     const q = $('#search').value.trim().toLowerCase();
     const g = gradeSel.value, sec = sectorSel.value, ev = eventSel.value;
+    const li = listSel.value, ver = $('#filter-verified').checked;
     return companies.filter(c => {
       if (g && c.grade !== g) return false;
+      if (li && !(c.list_ids || []).includes(li)) return false;
+      if (ver && !c.verified) return false;
       if (sec && !(c.sector||'').startsWith(sec)) return false;
       if (ev && c.primary_event !== ev) return false;
       if (q) {
-        const hay = [c.company, c.sector, c.primary_event, c.source, c.category, c.notes, c.funding_stage].filter(Boolean).join(' ').toLowerCase();
+        const hay = [c.company, c.sector, c.primary_event, c.source, c.all_sources, c.category, c.notes, c.funding_stage].filter(Boolean).join(' ').toLowerCase();
         if (!hay.includes(q)) return false;
       }
       return true;
@@ -128,11 +134,14 @@
     sorted.forEach(c => {
       const tr = document.createElement('tr');
       const total = num(c.total_score);
+      const spot = c.spotlight_count || 1;
+      const spotTitle = (c.list_ids || []).map(id => { const l = (D.lists || []).find(x => x.id === id); return l ? l.name : id; }).join(', ') || 'single list';
       const bar = (v, mx) => { const n = num(v); if (n==null) return '<span class="muted">—</span>'; const pct = Math.max(0, Math.min(100, Math.abs(n)/mx*100)); const neg = n<0; return `<div class="score-bar"><div class="score-track"><div class="score-fill" style="width:${pct}%;${neg?'background:var(--grade-d-fg)':''}"></div></div><span class="score-val">${n}</span></div>`; };
       tr.innerHTML = `
         <td>${esc(c.company)}</td>
         <td>${c.grade?`<span class="grade-badge grade-${c.grade}">${c.grade}</span>`:'—'}</td>
         <td class="num">${total!=null?total:'—'}</td>
+        <td><span class="spot-badge${spot>1?' hot':''}" title="${esc(spotTitle)}">${spot}</span></td>
         <td>${bar(c.stage_score,25)}</td>
         <td>${bar(c.financial_score,30)}</td>
         <td>${bar(c.capital_score,20)}</td>
@@ -182,6 +191,11 @@
       tr.innerHTML = `<td><strong>${esc(f.name)}</strong></td><td class="ticker">${esc(f.sha256)}…</td><td>${fmtBytes(f.size)}</td><td>${f.ingested_at?new Date(f.ingested_at).toLocaleString('en-US'):'—'}</td>`;
       tb.appendChild(tr);
     });
+    if (D.quarantined_count) {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td colspan="4" class="muted" style="text-align:center">🛡️ ${D.quarantined_count} junk rows quarantined by the data-quality filter (cookie names, nav boilerplate, non-company lists) — <span title="${esc((D.quarantined_sample||[]).map(q=>q.company).join(', '))}">hover for sample</span></td>`;
+      tb.appendChild(tr);
+    }
     // knowledge base cards
     const kb = $('#kb-grid'); kb.innerHTML = '';
     const cards = [
@@ -265,7 +279,7 @@
     renderColored(rows);
     renderGraded(rows);
   }
-  ['#search','#filter-grade','#filter-sector','#filter-event'].forEach(sel => {
+  ['#search','#filter-grade','#filter-sector','#filter-event','#filter-list','#filter-verified'].forEach(sel => {
     document.querySelector(sel).addEventListener('input', refresh);
   });
 
@@ -278,7 +292,7 @@
   }
   $('#export-csv').addEventListener('click', () => {
     const rows = filtered();
-    const cols = ['company','grade','total_score','primary_event','thematic_probability','sector','category','funding_stage','ipo_date','source','historical_flag'];
+    const cols = ['company','grade','total_score','spotlight_count','verified','cohort_year','primary_event','thematic_probability','sector','category','funding_stage','ipo_date','source','all_sources','historical_flag'];
     const head = cols.join(',');
     const body = rows.map(r => cols.map(c => `"${String(r[c]??'').replace(/"/g,'""')}"`).join(',')).join('\n');
     download('pipeline.csv', head+'\n'+body, 'text/csv');

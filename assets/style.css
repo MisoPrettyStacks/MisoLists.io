@@ -340,3 +340,9 @@ button { cursor: pointer; background: none; border: none; color: inherit; font: 
   background: var(--accent-soft); color: var(--accent-ink); padding: .1rem .4rem; border-radius: var(--radius-full, 999px);
 }
 .leg-desc { color: var(--color-text-muted); font-weight: 300; }
+
+/* spotlight-list upgrades */
+.check { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--color-text-muted); cursor: pointer; white-space: nowrap; }
+.check input { accent-color: var(--accent); width: 15px; height: 15px; cursor: pointer; }
+.spot-badge { display: inline-block; min-width: 22px; text-align: center; padding: 2px 8px; border-radius: 999px; background: rgba(251, 113, 133, 0.14); color: #e11d48; font-weight: 600; font-size: 12px; }
+.spot-badge.hot { background: #fb7185; color: #fff; }

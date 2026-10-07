@@ -67,29 +67,25 @@ SOURCES = [
      "url": "https://uplink.weforum.org/uplink-innovation-challenge-series-spring-2026",
      "category": "WEF", "js_rendered": True},
     # -- UN / Intergovernmental --
+    # NOTE (data-quality audit 2026-10-06): the following were REMOVED from the
+    # registry because they do not yield companies — their "entities" were
+    # polluting the pipeline with junk rows:
+    #   - UN ITU WSIS Prizes: kept (real org/project winners, kept as orgs)
+    #   - WIPO Global Innovation Index: ranks COUNTRIES, not companies -> removed
+    #   - StartupBlink / Startup Genome / Dealroom: rank CITIES/ECOSYSTEMS -> removed
+    #   - BIS Innovation Hub: publishes PROJECT names, not companies -> removed
+    #   - World Bank GovTech: kept (real award winners)
     {"id": "un_itu_wsis", "name": "UN ITU WSIS Prizes",
      "url": "https://www.itu.int/en/mediacentre/Pages/PR-2026-07-09-WSIS-Prizes.aspx",
      "category": "UN/IGO", "js_rendered": False},
     {"id": "worldbank_govtech", "name": "World Bank GovTech Innovation Challenge Awards",
      "url": "https://www.worldbank.org/en/events/2025/11/26/govtech-innovation-challenge-award",
      "category": "UN/IGO", "js_rendered": False},
-    {"id": "wipo_gii", "name": "WIPO Global Innovation Index",
-     "url": "https://www.wipo.int/en/web/global-innovation-index",
-     "category": "UN/IGO", "js_rendered": False},
-    {"id": "bis_innovation_hub", "name": "BIS Innovation Hub Project Portfolio",
-     "url": "https://www.bis.org/about/bisih/about.htm",
-     "category": "UN/IGO", "js_rendered": False},
-    # -- Global Ecosystem / Ranking Bodies --
-    {"id": "startupblink", "name": "StartupBlink Global Startup Ecosystem Index",
-     "url": "https://lp.startupblink.com/report/",
-     "category": "Ecosystem Index", "js_rendered": True},
-    {"id": "startup_genome", "name": "Startup Genome Global Startup Ecosystem Report",
-     "url": "https://startupgenome.com/report/the-global-startup-ecosystem-report-2026/",
-     "category": "Ecosystem Index", "js_rendered": True},
-    {"id": "dealroom_index", "name": "Dealroom Global Tech Ecosystem Index",
-     "url": "https://dealroom.co/tech-ecosystem-index-2026/",
-     "category": "Ecosystem Index", "js_rendered": True},
     # -- Global Non-Profit / Network Organizations --
+    # NOTE: StartupBlink / Startup Genome / Dealroom ecosystem indices were
+    # removed here (2026-10-06 audit) — they rank cities/ecosystems, and the
+    # extractor was ingesting report nav boilerplate ("What's Inside",
+    # "Rankings", "Methodology") as fake companies.
     {"id": "endeavor_outliers", "name": "Endeavor Global Entrepreneurs / Outliers",
      "url": "https://endeavor.org/2026-endeavor-outliers/",
      "category": "Endeavor", "js_rendered": False},
@@ -116,6 +112,20 @@ STOPWORDS = {
     "sign up", "log in", "cookie", "cookies", "menu", "search", "subscribe",
     "newsletter", "read more", "learn more", "explore", "download", "share",
     "follow us", "all rights reserved", "skip to content", "back to top",
+}
+
+# Exact-phrase denylist for consent-dialog / chrome text observed in real
+# scrapes (2026-10-06 audit): WEF pages rendered their cookie-consent dialog
+# into the extraction ("Consent", "Details", "Necessary", "Preferences",
+# "Performance", "Marketing", "Maximum Storage Duration", "Type").
+# Checked as WHOLE PHRASES (case-insensitive) — deliberately NOT added to
+# STOPWORDS above, because substring matching would nuke real companies
+# like Typeform or Prototype.
+DENY_PHRASES = {
+    "consent", "details", "necessary", "preferences", "performance",
+    "marketing", "maximum storage duration", "type", "accept", "reject",
+    "accept all", "manage preferences", "privacy choices", "functional",
+    "strictly necessary", "confirm choices", "save preferences",
 }
 
 
@@ -166,6 +176,8 @@ def looks_like_entity_name(text):
     if not (2 <= len(t) <= 60):
         return False
     if t.lower() in STOPWORDS:
+        return False
+    if t.lower() in DENY_PHRASES:
         return False
     if any(sw in t.lower() for sw in STOPWORDS):
         return False
