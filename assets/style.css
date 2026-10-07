@@ -346,3 +346,25 @@ button { cursor: pointer; background: none; border: none; color: inherit; font: 
 .check input { accent-color: var(--accent); width: 15px; height: 15px; cursor: pointer; }
 .spot-badge { display: inline-block; min-width: 22px; text-align: center; padding: 2px 8px; border-radius: 999px; background: rgba(251, 113, 133, 0.14); color: #e11d48; font-weight: 600; font-size: 12px; }
 .spot-badge.hot { background: #fb7185; color: #fff; }
+
+/* IPO'd alumni cards */
+.ipo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1rem; }
+.ipo-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.1rem 1.2rem; }
+.ipo-head { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 0.2rem; flex-wrap: wrap; }
+.ipo-name { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; }
+.ipo-ticker { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--color-text-muted); }
+.ipo-years { margin-left: auto; font-size: 0.8rem; color: var(--color-text-muted); }
+.ipo-state { display: inline-block; margin: 0.35rem 0 0.7rem; font-size: 0.82rem; font-weight: 600; }
+.ipo-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.35rem 1rem; margin-bottom: 0.8rem; }
+.ipo-stat { display: flex; justify-content: space-between; font-size: 0.85rem; }
+.ipo-stat .k { color: var(--color-text-muted); }
+.ipo-stat .v { font-weight: 600; font-variant-numeric: tabular-nums; }
+.pos { color: #15803d; } .neg { color: #b91c1c; }
+.ipo-outlook { background: rgba(251, 113, 133, 0.07); border-left: 3px solid var(--accent); padding: 0.6rem 0.8rem; border-radius: 0 8px 8px 0; margin-bottom: 0.8rem; font-size: 0.85rem; }
+.ipo-outlook .t { font-weight: 700; text-transform: capitalize; }
+.ipo-news h4, .ipo-industry h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-muted); margin: 0.7rem 0 0.35rem; }
+.ipo-news ul, .ipo-industry ul { list-style: none; margin: 0; padding: 0; }
+.ipo-news li, .ipo-industry li { font-size: 0.85rem; margin-bottom: 0.3rem; line-height: 1.35; }
+.ipo-news a, .ipo-industry a { color: var(--color-text); text-decoration: none; }
+.ipo-news a:hover, .ipo-industry a:hover { color: var(--accent); text-decoration: underline; }
+.ipo-news .src, .ipo-industry .src { color: var(--color-text-muted); font-size: 0.75rem; }

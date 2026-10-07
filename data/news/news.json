@@ -1,0 +1,796 @@
+{
+ "generated_at": "2026-10-07T04:14:28Z",
+ "companies": {
+  "spotify": {
+   "company": "Spotify",
+   "news": [
+    {
+     "title": "Why Spotify Technology (SPOT) Stock Is Down Today",
+     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTm1rNjRmdWdqNl8zc0x0TXNuWlRReVNwSWxyeXJKVlRNYTlNTHp5LUdsOHFCRlVoREtuNlVoRHVlUUNvZ3JDNXNoME9CRkZxSEx0VVk2V0Q2Zk5MU1g0cjdEV2kyMjZfaXQ0dk0weC13cDVZd2VvRHpsV1BveVRkNTYwVWJnMEFYRDRMVnFpdw?oc=5",
+     "published": "Fri, 02 Oct 2026 15:33:00 GMT",
+     "source": "Quiver Quantitative"
+    },
+    {
+     "title": "Spotify (SPOT) Stock Drops Despite Market Gains: Important Facts to Note",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNZWY1b0l6U25KT2dXSENGc0RzdFV1LUZQdkdwMXBOclExVHlVOGNJeDFianFrTkhCWnl3dlBBYVFCSVdsSmNpWHNoSk93UmU1YUgtSXg2RHdoYjZITVdNUzlaOTJvRGMtNG1uNW0zX2hWUHdMMzJsV0hoem52UE9FYldaZ3Zkai1YNGhDS0FxSks3aDZtREpuWE8zLWtOdw?oc=5",
+     "published": "Fri, 02 Oct 2026 20:45:04 GMT",
+     "source": "Yahoo Finance"
+    },
+    {
+     "title": "Spotify Record Earnings: Why Wall Street Says the Stock Could Double",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNdmdoQ2NRaXBxTWdVWF9DYnhrVGk2Y3p0V3V2Sm84WVZRcnQyb2pqTXNaTkVjM0RuMTJPWmx0NVdnREthdzJCLWFKV3FxQkhHTUhELU45YlhWNGZNOHdLOWlfcVJKNGtBM0xtX2ZZTXljcGc0Wmh3TTkxOXVoYXRsV21zUmZpdmtVM3h2SlRBS2NxOUFocTZ5RHBxMmttSnZVeHJRZERqejk4clJ5ZHQzMkpB?oc=5",
+     "published": "Sat, 03 Oct 2026 07:28:02 GMT",
+     "source": "Investing.com"
+    },
+    {
+     "title": "Spotify stock price target raised to $700 over upcoming AI mix tier",
+     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBfM3JaLXRKWERaci1LakdLNUZ3ejFvVUlZZG5ia1Z3T2kyenJKcHdDR29tYTNQdU5KaE44SDJQVTl0am9qbnFvejd4OEQ2dkxNa212Q0FxUkpLUzg?oc=5",
+     "published": "Fri, 02 Oct 2026 16:30:10 GMT",
+     "source": "Fox Business"
+    },
+    {
+     "title": "Spotify: Strong Q2, But Shares Look Overvalued",
+     "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQc1VVRGlpMWdYanpiM0Z4bWozWHNnbkZFNUNLXzJvdVlEZ3NyY1VuT0hIUktaRkRmRGplWWlOQzE5aWh6TGNoRzVtWF9TUndTbEJVRWFFWDdRY1lVU2NIUXgzVXZsbmh2MzN2UTNaR3NhcUoyZktSeXRHeF9zX2pEUnRKeVhkdU02LVJKLUln?oc=5",
+     "published": "Sat, 03 Oct 2026 12:40:20 GMT",
+     "source": "Seeking Alpha"
+    },
+    {
+     "title": "Spotify (SPOT) grants Jenkins 6,105 options and stock awards vesting through October 2030.",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQYmItWk1WcFlQYzBXYWtMQmRCWU5rQ1RKXzdPanVyRHNid0drREpVR0xpeTdlSHhOSU42cDRBYjVidFUtVV9IdU5NRzhKMVJKZ3JPdHRidTJ0UEc2VEo4N3dfX3B5bEh2ZFlwQjRYOGs2MFRjQWNkMFBOcmtXUE1sem1US2NLLWI3NE1xZ0NzQU1BYVFIVHltbkxQQWY3YlFWSGJPaWl5ZDdWN2g0WVBsa2VmQ0ZNWVk?oc=5",
+     "published": "Mon, 05 Oct 2026 20:30:20 GMT",
+     "source": "Stock Titan"
+    }
+   ],
+   "industry": [
+    {
+     "title": "Record labels are in a spin over AI music",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPNkFXaURQQ3hzNGZOY1lNdmRQUmJtZWpaS0J5WE5XcjJtemMtSzJ3dVFtekpaOGwzSUlXU1d2M21Kczd0V3lIbnVxOEY1VldVOExRZE5yNHRqelNmYmkzVlhUN2J4QW95MnN5Mm1wUFlfbUxubW1mWmdxWkdDT0VWSjlhSGNHOW9qRS1STWx3Sks?oc=5",
+     "published": "Mon, 05 Oct 2026 11:35:13 GMT",
+     "source": "The Economist"
+    },
+    {
+     "title": "Streaming Fraudster Michael Smith Sentenced to 18 Months in Prison; MFFA and RIAA Release Statements",
+     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQnVrbmlxZzY1emNxa2lGYTVzRFBRd0lHLUhhcnNKMVBUR1lkRVN3TFA3cHFSQmloY3YyakhRcUMtLU13V3dObzhQeUE0U1JvUDBleTJRMVU2OE56Sm4tUktfVmVSeXpEdXBZZ21SbFVvbDllaklzVGJLclJqRWVhYUE2ajZ3bXF6bURN?oc=5",
+     "published": "Wed, 07 Oct 2026 01:52:57 GMT",
+     "source": "Digital Music News"
+    },
+    {
+     "title": "Beyond English: How the U.S. Music Streaming Market Is Diversifying",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOT0tiWTJzckp5Z1JmTkRMSHhZc3ZTNWctcXdxNmR6ZFdzUTdaamRFTlA4bk1Tekx3aGUxRHRRWjd5cV9zQldCeEVNd21zUTJuLVJGeExmSHEtYjR1VGVpeEVicUs1blZMLWtBaW9XaDR1dWdsODJGc2RrMWp6ckxINlhYM0ZabGRsN3ZCY05sR0h2TUZMN3lKSUpCZDY?oc=5",
+     "published": "Tue, 23 Jun 2026 07:00:00 GMT",
+     "source": "Luminate"
+    },
+    {
+     "title": "Spain Music Streaming Market Size, Global Analysis | 2035",
+     "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNb1lpQjhldzVRV3BGVjBSZlp4QlZUYVUxWlp2NTd4ZGtlSVB0Q0pqekd5bEtYbEZGVXNicDN6Y2tzcnQzWmNGZC0zaFktdGk5QzIzRy1CSUg5T0lkN3dGVUY0WjlnQ1ZBQmQtcUFwV3Q4b1hiRzJ5YVVCOGJVVWZJeHFvaEdyUQ?oc=5",
+     "published": "Thu, 17 Sep 2026 07:00:00 GMT",
+     "source": "Market Research Future"
+    }
+   ],
+   "industry_query": "music streaming industry"
+  },
+  "airbnb": {
+   "company": "Airbnb",
+   "news": [
+    {
+     "title": "ABNB Stock Soars 11% After-Hours \u2014 Airbnb Raises 2026 Outlook Again On Strong Travel Demand",
+     "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZ19BU043SnhnVGNIQndNbDJ1WVFUVVNtd19NZFAwY1dKeFdJMndyUE4zRHhqbjdNSVJBeVhPZHBSSndhVUdlQWtKX0FvVGtKSW0xWVlPcE45ZWlqYUcya3BpeGdsZXVvdDhtY0xOR1JWNThkT0NvdjVqUkVXMzB5c2MtS005OWt3WmdOQkdhLVRCa1RVUk1PM0hmYkt1cWNwdUhzSEZ2bkdtVDJUS3V3Q2RiZTVzZGJiNk1NcQ?oc=5",
+     "published": "Wed, 07 Oct 2026 01:12:46 GMT",
+     "source": "Stocktwits"
+    },
+    {
+     "title": "3 Reasons ABNB Has Explosive Upside Potential",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQMDFpODduN1JEeHMwZVg3M2VuZ3Q2d29vamNrbF9ZNnIwbUs4TUc3djNtUzh6elJOT3pUN2pudFpGazBWVUFQMm9faFVCRWtWakRnVlAwVkVOQ0JwVWVpTHZFSUhzNEdJQ21jamFTUmVrT2Z6VzY3NWhkY3l6WkVZUXd4RURxZXNCLUhpUE9OZjFfR29qZ2hLVnFUNF8?oc=5",
+     "published": "Tue, 06 Oct 2026 15:44:34 GMT",
+     "source": "Yahoo Finance"
+    },
+    {
+     "title": "Airbnb Stock Rises After Analyst Calls It an AI Boom Winner",
+     "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE16TUtHdjdFbjRJd3U3WjBIVHczeThqemFPNkVXTlRTelBiQmJEQ1JIMG53cWFGQkprazhDcVBlSlo0QjFwWXdjRE1YWnN1MjE0bEFMOUU2SGFOMlF3dmhJcXhRQkQyMHJ5NlFWMXFVNWJXdw?oc=5",
+     "published": "Fri, 02 Oct 2026 18:45:00 GMT",
+     "source": "Barron's"
+    },
+    {
+     "title": "KeyBanc says consider buying shares of popular travel giant now",
+     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQRGJ5QktfanZnTDNXejllcVNxQUE5ZnIwY0laRndKVkRkYXpOcjAtTVUxUkQ1UHRzQUZZOXpjcFNGeUN0WVp6YmtHVkdPYlFPVVJ2UXJmTXlqOVFjQWktelRCLWg1THFqdWlWcjJ4LUxoQS1wWU5rOWdlVkF0TlFLMGpBNEN3UkpvWmljU2Vtb0pPY01CNWZv?oc=5",
+     "published": "Tue, 06 Oct 2026 14:33:00 GMT",
+     "source": "TheStreet"
+    },
+    {
+     "title": "Airbnb Inc. Cl A stock rises Monday, outperforms market",
+     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOaGdBR1YwSXRyalVJUk8zWUpIRFV6bGxpVXBlNmxYRkdIUHhGaHFJQk1fNXlKRFRjYVl6ZTZjbDVFVEZvNUdSalhmSk92cURmZl9uWkI2ak8zVElQLU01LTZpMnpLeGxLZFMyd3RVWEt3aThxOWRQUHFNbHBHNWN5VHVsSElBVWNZd01hYWZaMkZlZ1FaXzdvd1dTWndoUzBLMW1HQVFkRFRpMWRLc1hvemQ5VQ?oc=5",
+     "published": "Mon, 05 Oct 2026 20:40:00 GMT",
+     "source": "MarketWatch"
+    },
+    {
+     "title": "Airbnb Stock Rises After Analyst Calls It an AI Boom Winner -- Barrons.com",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNdXZickpXZC1tOVB6T3FNbkF1OGpLMldwakFaZVVUdmlyRVNFcWJyYi1ncnE2akFmVzBqdnNXOFJIU3RvWVQ1clFIRE11elFnSHJmVWdhcVNxZk9VSXhOZUR2Rm9ZVGFJajM5d3JMblQxY09Mc1l4ZU56V3BGWjV5aWxBR0E4bnRLN0lhOGxBU0lUcUdpWHFUdHlJdGw?oc=5",
+     "published": "Fri, 02 Oct 2026 21:44:57 GMT",
+     "source": "Moomoo"
+    }
+   ],
+   "industry": [
+    {
+     "title": "Short-Term Rental Policies: Atlanta, Spain, Maui",
+     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPZEhITHNvTFJ4RnNFdExMV0lveG9yc1JsRnZFVlJvZDNQZi0tQ1AtZlRweWJfYTQwU25TOVpZaUg4QUExQTBxTFZmcUxnblNBZ0FtclVWTlkybXJpY05SVzJrSGRFTXhLT3pJTFNGaHc4bDdtRERDUThjWXFrWGFKYw?oc=5",
+     "published": "Thu, 01 Oct 2026 08:53:50 GMT",
+     "source": "RSU by PriceLabs"
+    },
+    {
+     "title": "Airbnb or hotel stay? Tourism expert shares what to consider before you book",
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOOTJOQ1JIOURQbEdDWVRWVkR6RmZSeFZCRUZqWUpNZktkT0NoQ0RNN0dsNTJTVGxRa1FOMXhNVXpIcXhrMFgtWmxrRnlPQWxmaGR1YWFzd18zTTMtRlExbS1pVDlQaS15ckZvdW0wWHlkMGlGbnMzYjd5eWVkWEFEQjZyMkVJNldCWC1MVmlqS0x1UmVOVGs5SFZVY3RSLWZX?oc=5",
+     "published": "Wed, 04 Mar 2026 23:57:56 GMT",
+     "source": "Ohio University"
+    },
+    {
+     "title": "Michigan should not punish short-term rentals",
+     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNRFR6bWJzbVl3N2hqSGhTWi02Z2lfWXZQQXVPNDZCVG9CVlRhV0Y2OWRWSG9GQ3hjSW8wYnJndHFIbnNuZ0pERWRwRlkyZC1fS3VxVm1WdDhFV25qeHk3YmFOeVpYT2ttenJRWGxMNC1DZ3oxTU4ySXhLQ2pkVlp3cXE3ZlJNbngtcFRvb3VDcw?oc=5",
+     "published": "Mon, 29 Jun 2026 07:00:00 GMT",
+     "source": "Mackinac Center"
+    },
+    {
+     "title": "The Airbnb Replacement Is Starting To Look Like A Hotel With A Kitchen",
+     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQV3l6ZFhtaUlqcHBPWS02UVRBM1hLSS02T0x2ekhkaTVEVVZRam1uUG56Vy1nb0xaTGZVMkh5aC1HX05wcjB2X0tQR3BvN0JlNmFYcXhlSlowOGJnbnhrUDB3SHdVazJSMHBKUVB2eklWR282Z1BsaXhubVNoaXBpbg?oc=5",
+     "published": "Thu, 24 Sep 2026 07:00:00 GMT",
+     "source": "Travel Noire"
+    }
+   ],
+   "industry_query": "short-term rental regulation travel"
+  },
+  "wise": {
+   "company": "Wise",
+   "news": [
+    {
+     "title": "Wise Group plc (WSE) stock price, news, quote and history",
+     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE14YkZZVGZ5NFlHSkVURGo0dFdPZXg1SEVXTml2R05ybjhHdUtIT1VRTVg4d3JRcE1uU3NDTzlZYkZlTnVhUDN6NUNPUHJoa1Vp?oc=5",
+     "published": "Mon, 05 Oct 2026 11:17:31 GMT",
+     "source": "Yahoo Finance UK"
+    },
+    {
+     "title": "400,000 US shares bought back as Wise Group (WSE) also repurchases shares in London.",
+     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPQjlFZFk1dFQ0X1MxWEZjSFdoTU1jV2xzQ19VQ3lYZU1MTVdJVkZTSVZUNnlYSzNRRG9DUE5SMGQ3dUtjQW9zSUk5dy1sNzltcHZYcWluWGVEVXNZU0l0enEtQURROVpNZW9hSnR5Y3N0aFNwakx1T0FoQXYxa25YMlJpY01zLTFqSTFnSVVubHZ0a1JPNFAyN2Zvek5QWmIwejlTR2pMUXlsdVBQNEE?oc=5",
+     "published": "Tue, 06 Oct 2026 10:15:30 GMT",
+     "source": "Stock Titan"
+    },
+    {
+     "title": "(WISE) and the Role of Price-Sensitive Allocations",
+     "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNNEJfNVNENnhuMldicGdKUXJHSlZpT1d3a2w2OFlNWEZIVTJFMy1fMGhVUS1jSThMYmFaeU1vWFJxQnVYd0pyNnJTNWRTRXlmTTJ3UHlVd3Y4OVZNaVhXX2FlNmRBOVBUcF9VMVQxdHlhOVh1aGo3eUFaLTBxQS05WkxBU0VPeHplaDRiM0hON1kzZDlkbzZLWDhROWkwUjNtTVZxcW44WnFrR09JTXdzSzZQOTE1cDJoM1ZRajlCbUh3SlY5XzZCeg?oc=5",
+     "published": "Tue, 06 Oct 2026 15:32:01 GMT",
+     "source": "Stock Traders Daily"
+    },
+    {
+     "title": "208,531 Shares of Wise Group plc $WSE Purchased by Envestnet Asset Management Inc.",
+     "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPSjlOX2JqYVJSMGo0VmEyVFhVVE1EVDVvMTZlYndpRXlVYlpyUG9yTlh6VkYxdFpldTZ3NkpMa0RWaHVZYldldDVEQW9ESnRiczB2SlMxbWJ2SXk2c2J3dDNTaUgxTmlkUUliMFd3ZEl4T3dYVWljWWpCTzNpemY5ZmxudDYxbmVEMTZSTVNjSGFON2VmWTgxbjZJUWx3TTc3MjRlTXA5VlNOMFB4aEFnWnR4ejdncEp0NXF6SjJQMzVma2o0MWMtUWYtaG1la2NUcGtXSzNCWQ?oc=5",
+     "published": "Tue, 06 Oct 2026 07:36:18 GMT",
+     "source": "MarketBeat"
+    },
+    {
+     "title": "NN Insiders Made A Wise Decision By Selling US$3.9m Worth Of Stock",
+     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPTDI5X3hMZ0VhaFFfcmlTcDZCNnhwR29IaFZLM1hrR0RZQ0xacWRDN3UwYzlSOVFReGRVcjBNb284QlZUWjZ0S3ZzMGFNdDhhXzlzT3NDUnNldGxXamEtVmVMMHhWbTR1YzFmYzJLY01taUdvUHZ1N3lKRTRwblgtYkhUSWxTSnMyNFVRQU5WUHlWdEwwTXlnVkhBNFQwd1F3VWVoWFNPTHAxS1NJRlFhdk1kTF9uSjBPNkppRXhXVmdkT2100gHKAUFVX3lxTE5yQ1RmOUoyZzU2Y1VUUDQ2M0pjellEcVJsWFFTeTNleF8wUmlncUNHb2p2a2Nnb1czMDhORnNQNkc3VEN6S0xPbWNCLTFGZ2RyTlFyQnNXNGtidG5mbmI4andIY2lOTlp6aHlQc3JCQmF5bHY0a2lVU0dURjZUV2x0UnVBSVZmM19qQkI1WjBqTzhYZDhJRmloSUdWYXNFc3ZKMEpuVy11anRzSkZQRHpvYlNlU1pvdHRDTWwzZTVveU9yblRTTlc4ZGc?oc=5",
+     "published": "Sat, 03 Oct 2026 13:12:30 GMT",
+     "source": "Simply Wall Street"
+    },
+    {
+     "title": "Is It Wise to Retain SBA Communications Stock in Your Portfolio Now?",
+     "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPX0gtbnYtZ1dyUmxVN3hqUnpud1BheEN3LWJXTmM5OE90WjJhLUd0SjZuVDZRWmU4am5zTjZVLS1zSENFSThWY0hmUERWeUtRamhiNDhmUmlVTll6bEl3NElvSmc4azdaeEZPTFZCWENpWHVSN3VFWU9rek9RTUY2bGVja2N6TFptVTQwckw3NU43UWRjOTUxZlBmSDRMaEdfZ0xV?oc=5",
+     "published": "Fri, 02 Oct 2026 12:15:00 GMT",
+     "source": "Yahoo Finance"
+    }
+   ],
+   "industry": [
+    {
+     "title": "Q&A: Thunes on Fixing the Last Mile in Cross-Border Payments",
+     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWkNuWW5rSkw2Q1pnblN3SnRaVmVVcEJFeHMzNkhaQ3RyUjFaM3oza2JWNWJDX08tS3Vad0NCMDZ4WWY3TXU1QTZsZ1hkd2lXeExpNkFodkM1ZG5KdS1kY2RCZ18zVVQ5dWRWbmloUl9Oa28wSXlDUE5JaUh5ZEdkMTMzX05pb2pJOERaRlQwOWhqTGlQWnB3?oc=5",
+     "published": "Mon, 05 Oct 2026 23:52:57 GMT",
+     "source": "FinTech Magazine"
+    },
+    {
+     "title": "Kora launches stablecoin rail for African cross-border payments",
+     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOVzFwUkdjQVJwd09KMVhWZU54RkNDWHNPdzZTcS1MakVwS1NMcUZyenNSWmQ4cnp2U1hzQWdjajlxbHlobmNzMjh4MU04dVhQRDh5SVVuczRWaXYxZTA2bjhlcXFHU0ppdk9GM1U2ZTBwZGtqODRvbkRJeFBwZHRQLURIMm5vRWgtQkFteTZoUGVZZk5zSmthVTBXdWlWeE0?oc=5",
+     "published": "Tue, 06 Oct 2026 09:12:29 GMT",
+     "source": "FinTech Global"
+    },
+    {
+     "title": "Small Businesses Skip the Cross-Border Plumbing Big Companies Can\u2019t Escape",
+     "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOcVVETVZMRWpSOVdVUzFPY0VYR2hjUGd1aFFwd3JiaFRpV3BqcHZFa2lTU2MwTVROVWN2WXFWalZLMk5IUlFhVWctOTFyZEk2UVhtWVpHNm1fbGx2SlN2dDdRckZZeFZwUjJ5bk9BTGliRG5hV0ViMGwyMmJEM01vWmVRWVE5aUlSdlQ4ZjQ1cnBKVkl6c0gtclBxSFl2TklWRmpoTV9uZ1hhWVpBZE1jYVJXempoYnZJTzE1Z183bXhQeGw1MDdGWA?oc=5",
+     "published": "Mon, 05 Oct 2026 15:27:58 GMT",
+     "source": "PYMNTS.com"
+    },
+    {
+     "title": "Payments conferences for 2027",
+     "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9Va0VBcjBDR05GOVJTZ2p4V0ZaOGxnaUF1dEttZm1FRWxtWEZ1Z1A0OHZXNFB6T245T0EtSDVtQ1loUzRHbmVPWmRRSWxIbEo1ZGlQSWVmb3hnaUx0U1p1Q2lTdGltcFY5Tml4dGYxZ3gwS2Q3bTNKcHZvWQ?oc=5",
+     "published": "Tue, 06 Oct 2026 19:17:46 GMT",
+     "source": "Payments Dive"
+    }
+   ],
+   "industry_query": "fintech cross-border payments"
+  },
+  "alphabet": {
+   "company": "Alphabet",
+   "news": [
+    {
+     "title": "Why Gemini 4 Failed To Ignite Google Stock Ahead Of Q3 Earnings",
+     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNRkdSWjBMaFJnZ2k1ZmpOMFdTcGVQQkFCR2J6UkFLN2ZZNEI2SUVNamVoZDFYdUN0eU5oc0Y4TTR6U0Q4RUtCMHhSZk1BeEVvR2ZDbm5xazRZWWxnWmk3WS15SkEzMExCRFFuWEQ1MFdlaExHc2plenJWcHo0OG5RaHRvOUFGYmVfcTU4SUNiMVFNYzcteXZKcllHekJEN0RPZEE?oc=5",
+     "published": "Mon, 05 Oct 2026 12:00:00 GMT",
+     "source": "Investor's Business Daily"
+    },
+    {
+     "title": "Google signs 20-year nuclear deal with Constellation Energy to power AI build-out",
+     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNNEE0MUZFY2hfcDFfV2lLVkVlS01RemkwblUzTUR2VDNOcVp3RGpIQkh5bkdXOS16eXlzeTlwRU03bTFFTHM0MlN0T1VFOTgzcERkMnBDb3FDdFU1N2Zqb05SblJoZEtGTDNqTGwyZjhFWkdUdlhFaU45dVYzelJaTVYwMm5iU2ZlYlJUV1N6ZDFLdVduOUtoMWxhSVpyMFJRd01NNlEwRFFhZzlRcG4wdDEtcjZ0WmJ1dlFjNmV3eEx3NThsQ1Jiam1Bc3JuQkJ0ZUZ6NkNxNFA?oc=5",
+     "published": "Tue, 06 Oct 2026 14:37:43 GMT",
+     "source": "Yahoo Finance"
+    },
+    {
+     "title": "Nvidia, Palantir, and Alphabet Are Sending Shockwaves Through Wall Street With This $17.5 Billion Warning",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQTUtFd2hpakhjeXVQZ3U2UVJUS1Y2d2pjNWY4Tlk4SlYza21qT3FlaFFaQWpZV3Z3VlQ4STRTbmdfZnJnQkQyZUxCdkdkMmQ5WXgwNk1zUkxIVGFHbE54TE1xQjRET2xNN1NMYlhVT2pBbEV6WUM0X2FQVXUyMmdvQ0NBeHliUjM2Q3REMVluQ0s4MnU1R1h0Q2luSjlMNmd6YURKZENGOGdlMWdDUmlSMF9QNC1FdkY5R1JvMzU5MXFQdFllUXc?oc=5",
+     "published": "Tue, 06 Oct 2026 10:06:00 GMT",
+     "source": "The Motley Fool"
+    },
+    {
+     "title": "Planet Labs Stock Is Down 66% as Google AI Satellite Reaches Orbit",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNODFXMThBeDRScldUY2FPT3oxaFhOY2FTQnU3dkpCQVFvS0xRTFRQX25qbFB5NzRtdXlJU2stSDc5emRERXBwUFJsRHc5UXlFck9Gb0JuX1dROVlkSGo1emFKMXc0a0M0ZVZEUno0MnQxSzJyQnVnZ3VmTVpJSVo0dG55Vm5rejhBM0J4TmNJQ0xwY2NXNUQ4eEhUeXU?oc=5",
+     "published": "Tue, 06 Oct 2026 16:22:50 GMT",
+     "source": "Benzinga"
+    },
+    {
+     "title": "Hong Kong Stock Market Concept Tracker | Alphabet, Google's parent company, has agreed to purchase nuclear power from Constellation Energy; the commercial nuclear power sector is being repriced (with related concept stocks listed).",
+     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdC1iOC13MUpvcW9Ncy1IS0N0TGtER19YeV95aTlZQ2VJckJjcjRia0FtN293cm93eTdiUENKOEZITU5uVjY5V2Q5VTJEalZaaWZRcFNpaUx3N3N1THdFN015X3VFckhfc2R4NDFNUUhGenpkeDQtUUl4d2ZJa1EtVGJFcjVGNktSZzZWQV9XRlVEUmVIYzFGZTJTanpmX3BKMF9XdjVLM2ZyZw?oc=5",
+     "published": "Wed, 07 Oct 2026 00:22:45 GMT",
+     "source": "\u5bcc\u9014\u725b\u725b"
+    },
+    {
+     "title": "XLK Does Not Own Alphabet, Amazon, Meta, Netflix or Tesla. Three Stocks Are 35.87% of It",
+     "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNWWQ0TDB6c1NKVUg4NWdvRXJCVjRMT3VxU2RCS0pPUFR2U2puaDZwei1JTGloRmFFZnM4ZkpQaTJrOEhHLUJrbkdQa2JBbDdlYzdFVmN4dHVrU3B4bUtqNXdwUUlLLWJabHJ2UnRWM2doUnZtdEpmcHR6aGprNHRoeUZHdXhDYVRtT19FSW5vU0hJSUtkOGZ3RDlvODZqVV9fS2hlMExOaGJxbGxBQTFFc3kyYk1Sd0hra3hNWU11YXNUSGp4ajZUZEJwOA?oc=5",
+     "published": "Tue, 06 Oct 2026 22:33:00 GMT",
+     "source": "24/7 Wall St."
+    }
+   ],
+   "industry": [
+    {
+     "title": "Tim Carney Breaks Down How AI Regulation Could Benefit Big Tech - American Enterprise Institute",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQcjRYUHZtMkJjODZyOVI4VVZJd2ljR18zOVNaRDdfYngzbFYzYmtILTU1TDJ4YVlWbUhIU0tvSUIwVmxRa1VfVzcwVklXTU5xQ0tVV0ZqM1VKaUFuV0szMExxSk5GTThISllxdzBINjNfb0QxU00zZVpjN1AwSkdsU3dYazk2dDVoSC1CMTNiNkF5anNvS051SnZCcw?oc=5",
+     "published": "Tue, 06 Oct 2026 22:06:48 GMT",
+     "source": "American Enterprise Institute - AEI"
+    },
+    {
+     "title": "Calls for AI regulation grow as experts warn of dystopian future",
+     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxORzZ6VmVMVzR6NW5wMGd4ZDhaVThLNTd2VW1wbE9NZk43WGgxZkR1MHBiZHoyc3N3U2NLa1QyYWxod19jamQxMnNDR3NWaGpMMk1aTnJ4WDRvOTZZZlRFTWlsUjNqRFJ0NDZWWHNHQUZCTVROd2l4eDM0Wm5BTnVvWDBIX1V5RnBLaFQySXZnWlNTVUhHVnVqcWtLOXl0akY5T3EyRkJwQzRNRGs?oc=5",
+     "published": "Tue, 06 Oct 2026 10:52:00 GMT",
+     "source": "Semafor"
+    },
+    {
+     "title": "Opinion: Is it reasonable to be afraid about Big Tech\u2019s ability to regulate AI? Yes",
+     "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQVUZHamFhUWdUdnpseExDckZZZEZvM2VoVHhhRUZJMVJqM0N1cEZHbmQyemZkZlI3Sms0MEluVHZ6aGFPOXV6ZXdMaVhBeUQzZ3lwSHoyRWtzMUc0RzJiY3hvYnVtaUZiNUNRODFTV2xRVjhkN29GWFNOQnBuY1NRWC1zaUt6RWpfTDRNTzdDZ04xNlJQTG9JRDVqRVhrcWN3NEYweTBmdzRLZU00cFZDYVFKRGRwZGQ4Nm5wLTV0Z3FWS3lSaUhGTQ?oc=5",
+     "published": "Mon, 05 Oct 2026 09:00:00 GMT",
+     "source": "The Globe and Mail"
+    },
+    {
+     "title": "Lina Khan says AI companies are following the same playbook that got Big Tech into trouble",
+     "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNMkJmMjlENEJpdFUzancxUkpwc0ZFMVFMX0UzOEVTMlR4M1dWNHNHeURmMkZwTFdLWTR5RVE4ZEhRNkc3WWVqcE5mZFhEb3VTUTg3a3V0d1hhU3UyR1RFUU1tYmo3RXU0dzdMbmN2TkdDbDZHc3JETlFpQ3ctSVJWLVZjYXU0NVpfLUYwZHYyNlJSVHI4SkZaX0l1ay1zUklZc2Uw?oc=5",
+     "published": "Sun, 04 Oct 2026 18:03:00 GMT",
+     "source": "Business Insider"
+    }
+   ],
+   "industry_query": "big tech AI regulation"
+  },
+  "palantir": {
+   "company": "Palantir",
+   "news": [
+    {
+     "title": "Nvidia, Palantir, and Alphabet Are Sending Shockwaves Through Wall Street With This $17.5 Billion Warning",
+     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPRWpKdnEwZHFfWVMtWW5EYWFLZDNiMnRhUmNWei1KTWFrSF9ZVWVPZzhrdlYwWk9Rd0Q1NlI0X1F1NmxhV0VsZ05iWG1aMzlxd25aVUltTXhkbGNMdTVXcmlQVXBKT2hGT0V4WmJjMVF4b24wbkhraHVQdHZtb09EV3k5anFEUEJWVTRfTDlTVk9FaEllNW9aLWN6MmpJYTRaeWlZVVEzOUE4d1Z4?oc=5",
+     "published": "Tue, 06 Oct 2026 09:26:01 GMT",
+     "source": "Yahoo Finance"
+    },
+    {
+     "title": "Palantir\u2019s Weirdness Is Part of Its Charm. The Stock\u2019s Appeal Is Easier to Explain.",
+     "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9VUmJCZzJySXB0NGJJNkRwekRmSUVEbWltU2xibFNYdGtlWDVMMnJGMEdnSDhUNFZoOGJFekhKQURrN25QQzhwdXFBZENIOU1hLXlzaXF2alFrSjlub2M0RkZCbGJwTmNCMC1UOVZVWGtJOGx3MnQzUXNwZw?oc=5",
+     "published": "Tue, 06 Oct 2026 00:00:00 GMT",
+     "source": "Barron's"
+    },
+    {
+     "title": "The Overlooked AI Stock Poised to Outperform Nvidia and Palantir",
+     "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQRVBweG4tTTFuRUYtYk9mOGFNVHktaTdqamNrUzAxc2FLdmJoYzZPcmExZW9YRy04TkpZZ2FTa01wMzV2SGJHcG5oQkdXd0UzUTlVN2l3US1vUGNvMWxwTmludkctOU5GN1l2STRrWHp3RFVSX2VhQWxsdURULUhyUjR6Z1d2LWZ1dmlKNGh3RFhWYWMyRWRLXw?oc=5",
+     "published": "Tue, 06 Oct 2026 08:35:00 GMT",
+     "source": "The Motley Fool"
+    },
+    {
+     "title": "What Are Palantir Stock Bulls Not Worried About?",
+     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUkQ4YzFhRE9wQWRvVkFueFczbFkwNGxMVEgzREpZTmxKRmJOYTRDU3NZWnliTFlnNEpKcjJtT0pPcDhkbmZhMjRtWU40Znc5d0ZJMkVQMk5TUDl3dkVVLXBDc2pFUGRvZUFfUUxNNDFDdVFqUW93SFN6N3ZDMWl5MlZiSkg5aFNkcWUtenZQc290dGhQY0l3SW94V29zYzI5RERxeUZkRHJheTda?oc=5",
+     "published": "Tue, 06 Oct 2026 14:33:28 GMT",
+     "source": "Trefis"
+    },
+    {
+     "title": "Why Nebius Is Getting The Better End Of The Deal From Palantir (NASDAQ:NBIS)",
+     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPYkZKRkljVmhtY1pOYjN4SjRTTnRLcXN4c2RMWEtYWGRYXy00dV9qd0phOXNyU1hVRGJDS255U1JwektkQ1lENFc0UHhxbkpZM2ZIemoyZzNJQzFNLWV0dDlNbk9GSHVxazV5TC1KUlRJYTdaby1MTWl2dVBQeVVXZVFCTUFWMDZPWk5ZeUsxRVFzbzB6NjRiQy1TN0EzQm8?oc=5",
+     "published": "Tue, 06 Oct 2026 07:17:13 GMT",
+     "source": "Seeking Alpha"
+    },
+    {
+     "title": "Palantir Just Had Its Best Quarter in a Year, Up 60%",
+     "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPOUxMU0ZKRW15bTRsbTFUZ2pYVFkzeFFBQ3dnOWhDenRlaDV5b3o4bVUtSE01ZjZ2bmZUSkRQNnBlTllVVlFLaHVhamZRUDVsbGFSUGp1SndONUNvUXRkVWJsY3NrX1B2cHN1R0Jic2lmbEItVjUxRnRCOWh3U2JHbzdQWmVndHBBRzllLTVBS2NFbTRJaDBwYTJR?oc=5",
+     "published": "Tue, 06 Oct 2026 12:21:00 GMT",
+     "source": "24/7 Wall St."
+    }
+   ],
+   "industry": [
+    {
+     "title": "Anduril Scores $2.9B Navy Contract in Defense Tech Surge",
+     "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQY0tqclNYVV9BNXBWNVo2amNVS3Z3MjMzZE9yUUpjc1M1RGpDUjhMeHRDcXRhYzU1ZDg2c1pBcG1aaUl6ME10eW9VUU8tRDM2cVZvS212bHFESUZyTXFxVWhkNWY0Um91REo4cWV5SFVBVWZPUUFyMWFGOGVDcHFxdzNsYlNBN1hGUlpEYzFvZHFMUQ?oc=5",
+     "published": "Tue, 06 Oct 2026 21:09:00 GMT",
+     "source": "The Tech Buzz"
+    },
+    {
+     "title": "Elon Musk and Palmer Luckey's new Pentagon roles raise ethics worries",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPMkxNSi1KYWdSc3RXMURUU1J5bk9rWVE1aG9EdXY2R1piOHhib09LVkhCeTBUcTJ4SjFIblZZdE01T2pfeEtZc2dtRm0tZElDeU0yRGhuU19uVHJFYVF0azVGcXBnbGFRSXAyWWhENGtLVXcyVks3ckVGX0Nla3hFRGhlVF96VGdscE16WG9Id2I?oc=5",
+     "published": "Tue, 06 Oct 2026 09:00:00 GMT",
+     "source": "NPR"
+    },
+    {
+     "title": "Vroozi Brings Aerospace and Defense Procurement Leaders to Beverly Hills for AI-Focused Tech Forum",
+     "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOU3ZqQXFWNC1MNVhwME5kVExBbHlUZ0E4SEdWa1JmZ1M1ZVpsT1Z2bEREUUk0cl9FeTZJazVZXzV6MnZra3FNTkRkSEhQTVJvVEVmbmxGQmcyWjlBR0s5ZUstdC1QYi14emswdVF1anc2M0YzeWozbnBDTEtmNVJUemlfNUxUajJ5dC1RTmhTU2JZV1JLT2VPRUZzRzNJZ0ZQZU44MjJHQVNaNVlXTE1KUmZOY2hjcU11SmplVGlodXpNQ1FJMWRrakFtUHZRTHRLYzVR?oc=5",
+     "published": "Mon, 05 Oct 2026 19:07:01 GMT",
+     "source": "citybiz"
+    },
+    {
+     "title": "Pentagon AI Contracts: ChatGPT Mil and Grok for Government, Explained",
+     "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE02a1Mxb25IUlY4ekVXbmY4dG8zV2hHdzNyR3JUMkhXdXdxeWg5VXZLSEd4cDY0Z2I3NFRlOHZ1QVY4V0RRWExHUmYtSmZaREEzLWtwZnFOUERUemdaaFh2Z1M5NkhHUnVlMFE?oc=5",
+     "published": "Wed, 09 Sep 2026 07:00:00 GMT",
+     "source": "Built In"
+    }
+   ],
+   "industry_query": "AI defense tech government contracts"
+  },
+  "dropbox": {
+   "company": "Dropbox",
+   "news": [
+    {
+     "title": "Dropbox, Inc. (DBX) Stock Price, News, Quote & History",
+     "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5qbHp5akdJTVgzREl3dXQ5cXJzSW83WUsxWTNpVDNvZVZhVENYQllySVZzeVFkdGNiTjMwZHozcWVMcGVrRHIzU0IxVzg?oc=5",
+     "published": "Tue, 06 Oct 2026 14:04:24 GMT",
+     "source": "Yahoo Finance"
+    },
+    {
+     "title": "Dropbox(DBX.US) 10% Shareholder Sells US$12.05 Million in Common Stock",
+     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbzZNQm9Ua2pzOUZ4UDVpSGdacTAzWmJCU0FreHRpZ0FnZ3ZOZDRuVGR5RWJoaW1XY3NWaHQ4am9FVUlYQ2tzRjN2MnhFa242R0FOVk13OVZWNnlqNFVqNDNiNy03SVdOOEJFN1lweEtza3VSbWdXZGJDWFhJVk5LTTVDYnhkRlQ2Zm4xYUE3NXhkZHRoTmtndmhhRzJZVE0?oc=5",
+     "published": "Tue, 06 Oct 2026 10:45:01 GMT",
+     "source": "Moomoo"
+    },
+    {
+     "title": "After a one-for-one share conversion, Dropbox (DBX) Co-CEO Houston\u2019s trust sells 354,300 shares.",
+     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOTnZXSVVWZWo5YlJpRWNXbmd3V1hmdWx1YnR2aTM3QXpoRkdmZXk3SG1IZ0QwWTFuSmNoRXRiaWlJc0xMbVNyTGxjQWFmQnVNQVFCb1hXNkZyaDAxUnB1Q2VMckxaU0lVd3pxNUJKVHBJcndWSXdVRW9MRzFMbGN6YVFrUDRCMk5kRUxucjFWZGVVSzAyUVBxUHltSVVpQXNtUXdrU2Nibw?oc=5",
+     "published": "Mon, 05 Oct 2026 20:57:32 GMT",
+     "source": "Stock Titan"
+    },
+    {
+     "title": "Dropbox (DBX) Stock Still Looks Undervalued As It Gains 26%",
+     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZE1GQVR5dmoyS3dHTmh1cC1SaGRpOC1PTUlHMEtUMTdtOUtwZDFrYjF5T3MwSHdlVHpLbUFycGFNYmZEOGdqUVBJbjV6eFVXTl81UzE3a2NIR3RFUTJUb0pWdVZxc0hsX0d4em9JT2VneG5jTkVKUUMzUDJ2U2NscTNiNkhMODY1eUJwQjJWczVEX193WmV2NzhxMUxUelU2V1M1a2RLV25pM29nT2VvNXI5Nm5mMnJ5bmFVUFNB0gHDAUFVX3lxTE1MN1RrMy1sMzJfZDBTQ25aTlhJMmhTSnRqcTBaSDhEdVloRTY2bHQyS1k5b0UtNXhpRnUzNG9CNGRQQUJQSUtTbFhUNlY0SlBvWHg5T05tZHRsQ3NOTlNWcVF5VTJQeVZwZXhleHFLdURjbnpHTnkxR3kzT1NoU1lvMGhkR01Lc2x3b200M3dJWE5VNUhkOS04a0ZYQ0lpUXlhcm9mT3RYRk5IOXF2TFpvS1J5aXptVDlRS2Y0R2l2VjNmVQ?oc=5",
+     "published": "Thu, 01 Oct 2026 13:41:50 GMT",
+     "source": "Simply Wall Street"
+    },
+    {
+     "title": "Dropbox Stock Falls on Downgrade as Price Prematurely Reflects AI Growth, Says Analyst",
+     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9lMG1PSmRlc05BMUo5emVqd3JWUlNOQjM5bFJULVhTTDhQek93RnV6akZOZVRaSVVPLVluVk5Od3B3Q1dPM3hnZS1CTGZhOTJDdzlhZVd3WFYzLXpGZjViQWJVUDZqTk1kYnNpOFhsWC1CRU5ScVBEYUM3R05GZw?oc=5",
+     "published": "Thu, 24 Sep 2026 07:00:00 GMT",
+     "source": "Barron's"
+    },
+    {
+     "title": "Why is Dropbox stock sliding today?",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOTkNoOE9FODhLVWItd3Yxb2FwdzlibXpKQ2FtRUEzUjdyaVdaSUxVMFNUWFRTTENOV0RCRTAtekRxdVV5S1dlMTJyTVpVbFZLUjVhODNYTXlLN3Iya0Z3TzNGYlN6eWRaSEltNE12ZDYxdnkyWDdsOHpLdkpOMk94aFFUUlFRbHd4VGZRMHJZNFpBb1VrUThNOFliUTI?oc=5",
+     "published": "Thu, 24 Sep 2026 11:54:06 GMT",
+     "source": "Investing.com"
+    }
+   ],
+   "industry": [
+    {
+     "title": "256 GB Laptops Boost Cloud SaaS Adoption",
+     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNTkRzNUNTeXpBOVpwd2F2eGJmMzdGQUpxcXhGZWEtTzl5VVJMVjYtMDBHZUI5OUdzZzk1NjMwbmxITkR3OS05endMSHJwZEkwNzJPbmdiNU1sR05rMVRFSnJvaVZZYy1vOFBTWnVLNWNRZ1JkZGpzNUpsWDJ1Y1JlYUZnZ3kydS1GYWhKSGVQNllkOXpiQnVsNTZVSjBBNU05MXd3RHcwOEFRZEZ6Y3Ezbl9iZmlMSlBTdUw0VDJvX2dBZU5ZYk80Ujd5WlhMMmxTdl9sUA?oc=5",
+     "published": "Mon, 17 Aug 2026 07:00:00 GMT",
+     "source": "SaasRise"
+    },
+    {
+     "title": "Cloud Storage Usage Statistics 2026: Big Trends",
+     "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9lQzlubWZUQ1U1VkJZYi1BdkRyc1lRei1aOGRhT25GQWMtY19GdXdYVTZlQTRZWVJSbld4SlpET1ZmLUYxcXlYMjVJZXJsOHBSYXptWmJFQWVPUFU0YXNieC1YdWRvQnc?oc=5",
+     "published": "Tue, 10 Mar 2026 07:00:00 GMT",
+     "source": "SQ Magazine"
+    },
+    {
+     "title": "The Best Business Cloud Storage and File Sharing Providers We've Tested for 2026",
+     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPLW9Lam1LbHdSYmU1cWhhWHdVYlYwVEJDY01md2k2bi1wTWN4X3BHSGk4QjNCNzEyUEpwNkVLcWVRR1N2bVRMMlEzaWpjWGE4VVBzM29ZLUdiU19jcmNyZHhFYzZIaWg5LTgtNXVqRU1taFljZnhHV3JaWEdhMWlCQXpBVkl6QUhxRldUWUxXaw?oc=5",
+     "published": "Mon, 30 Mar 2026 07:00:00 GMT",
+     "source": "PCMag"
+    },
+    {
+     "title": "cloud computing",
+     "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5mZkMwSjVNdElzU3VyTk1MVk9LaVBkcGRTUmZ2bGFoVjVxaVNJVzdac0N1cW9ENVBzV1ZSemotZ1VqQ2l4VzlNTFZKY1p6anNXYS1WVmtJOExGajNINFJrTXVFaw?oc=5",
+     "published": "Fri, 28 Aug 2026 07:00:00 GMT",
+     "source": "Britannica"
+    }
+   ],
+   "industry_query": "cloud storage SaaS"
+  },
+  "meta": {
+   "company": "Meta",
+   "news": [
+    {
+     "title": "Muse has been a boon for Meta. It can soar much higher, Wells Fargo says",
+     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNRV9CTzZwbUZzOHlTU0R3Q0ZuUFdEZWdIMkk0YVE2MnV2ZTliUHctZm0wUjlVSXVRTE9GR0trQ21YUkhicjdrdmZCd0l4ejd0M1dMVDRSTjQ2bGtDNmpMU3dZYVVGeTlOMEtqTXNHQzJZbHl5YUd5MWx3QUxYM1d5WVJuN3F2c2ZCWVhpcFFVcU5PNTk3RTh1UDJyaGtfVjh3UEE?oc=5",
+     "published": "Tue, 06 Oct 2026 15:31:05 GMT",
+     "source": "CNBC"
+    },
+    {
+     "title": "Pay Attention to Meta\u2019s Quiet Dismantling of Its Biggest Mistake",
+     "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNMG5uWHI1WEJFdXI0SkhUbkZYOE8taklmb1dOdXlScmdSdm9Xekc5M0lPN0RycE12YzVMbWJJNk9OUktKYjNYeTF1YndxVnJuU2gyOEFFTmUwQmtDbE9yY3dicmdHemphMzVoU002ZnRNVDQ1Y2x6cFlxdU9CSFQtemVCeGVIbGdpTFp4UG1TVVRadjU4VDJEM21JOTBPbFNMSlZZ?oc=5",
+     "published": "Mon, 05 Oct 2026 16:45:06 GMT",
+     "source": "Yahoo Finance"
+    },
+    {
+     "title": "Here\u2019s Why I\u2019m Very Skeptical of the META Stock Rally (And You Should Be Too)",
+     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPcjliQnJEOGNzYmJLdVpSbm9lUGlpUTRCaDI5V2NGNzFSNjBxMy1lb1lTVmlLd29FZ2pva3hEMlpFYkdyZ19XWUs0RTlUVlM0WFpwTmRPUllMNjBCZ1hNaFJrOHBLLTducjFVOWI2eDQ0QnVOSzF6aUlSWW1YdEFMYW5vclloRjI5dGJkU3ZZUlhkVGpKTXptY1RFTVhaSEY5LXNuTWFKelM1N01rZkZzbFhRZnJoTHI2?oc=5",
+     "published": "Mon, 05 Oct 2026 20:19:03 GMT",
+     "source": "Barchart.com"
+    },
+    {
+     "title": "Meta Platforms: The AI Spending Looks Crazy; The Economics Don't (NASDAQ:META)",
+     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPc0NySDZ2ckxsNy1yYXBnMGNLa1lWM0tSM21vUWNNYmlQUElIaGhyRTlYMkhnRmpGQzdTOTB4YmJZZkpOZlRJcXhDRU94ZmFLRi1Ld2NaQlppNkxrR053SWNxNEt6RlF6WGRhV0o5bkxRZFdYek5iUnBxc28teGVoWDIxb0QwYXNCR09xODZtM0s2VExJbUlyUFd1OEc0Tkd5eTJObg?oc=5",
+     "published": "Mon, 05 Oct 2026 15:51:06 GMT",
+     "source": "Seeking Alpha"
+    },
+    {
+     "title": "Meta Stock Up 21% in One Month: New Movie About \u2018Antihero\u2019 Mark Zuckerberg Could Hurt Momentum",
+     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPVXF1SnFSOGkzV2k2TjNPTVlfc0w4aW13WkxybkpUejZvbHdNdU1FbVR0TjR4VXVWMnBCWkstcXRNWEdiTGhPejRxSGluLVk3aEp5TTRNdTV6b2xtOWdwaS1UY2dVeUp5VG5lU3NvS25CZ1p3Q2hac2JWbDBnTFZva0cxLVZlYXpJTUQzWTMzVmt4VVRwanlzNk9veU1QNzJuaUxkNzBLTTh1Nmg0dml2UGtVTWRZQkd4TV94RUJleFhNS3VnYzVmQm5vTTlTVXQ0cTJKdFkwY2tlbjY0NDlSOXdVNA?oc=5",
+     "published": "Tue, 06 Oct 2026 20:06:57 GMT",
+     "source": "Benzinga"
+    },
+    {
+     "title": "Meta Platforms, Inc. $META Stock Acquired by Legacy Private Trust Co.",
+     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPMllLb3A0NTVYLVk5X3dIWDAwdGE4SU1Ta1FpZEFMWjRaRElsS0d0RXN0X3ZxdDBjQ2lucVpTdWtXbkNOV2R5RFRyMVdnMXlhNmJPN0V1US1OT3I4R3VJeGVoR196RmJoRFdJSjVjOFBYdnhQMVlfNmtOSEdJT0tIdXNpQmN2YXVobXRxbklMd3FrbUItbTdHZHFVQVY2Q05FaWU0VlN2by1CNC1QYURVeWw1TllUMzRRVlJPUTgwRUc1YkZQ?oc=5",
+     "published": "Tue, 06 Oct 2026 17:15:07 GMT",
+     "source": "MarketBeat"
+    }
+   ],
+   "industry": [
+    {
+     "title": "California Signs Nation-Leading AI Chatbot and Social Media Laws: What Businesses Need to Know",
+     "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOTmh1b2I1Z2lBeUtZZ2FzNFkxZGFLNl9JLVZ4dUQ4ZVJvVVE5Y3ZnUlJYUzVGNGs3TTlobmROY1FDQ05ncnVrWXNnZlhwTnVCNjhRbWh6RHJMVHdvektJcXpsZFE5aVFRdzFXYmJWYTFBaUQ1VUwxMmxLVGw2QzdadVJMRy03cVFhUzhnT2VJMkVVUWN0aUF0UFYwcUhZdW1xZWxDRXUteUxnTHBqVEhKRDBRa1Z4dzJsY2lLZFVkTEFqcE5nR0ZiaWdNeUlVbl8xQ2R1SENMVUYzMURr?oc=5",
+     "published": "Mon, 05 Oct 2026 20:31:40 GMT",
+     "source": "Retail & Consumer Products Law Observer"
+    },
+    {
+     "title": "A reckoning on social media addiction came late for many kids. Will AI safety be different?",
+     "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOMlJMQlJVVDF5aVF0R2VDOFJPSmtZWFJjLVpWbW8wMjcxRWoxcHJ1c01SazV3UXhteXRiVFF6Y3R1VnlLSE5qSDJkeVNBcl8yRlhQQUJoUDZwNUdRZVZYbklGem1qNV9DWjJaNzFCTTJhdXNmcFhWaWpUb3RaaFRmS25qbjU?oc=5",
+     "published": "Mon, 05 Oct 2026 11:00:01 GMT",
+     "source": "Tech Xplore"
+    },
+    {
+     "title": "Sen. Adam Schiff on making Congress relevant in the AI age",
+     "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPZlVjd0xqcXBVVVo4R3E4X08zLUhGU1hkMjZYX0dsck85bmhRejdtb0xwQ0ViVFpWckdicl9naXczVDBYYlU5NFBLRldiNTNRNGJyY1JwN3Noc01EcTJqd0dEY0IwOEhYZzNPeWtSQnkxNWJ5RDJfZ3FpRWVyUlhhbVg3N2JsRUNDODlsaXgtUmwyQkNKOXc?oc=5",
+     "published": "Mon, 05 Oct 2026 14:30:00 GMT",
+     "source": "The Verge"
+    },
+    {
+     "title": "Governor Newsom signs the strongest child safety chatbot and social media laws in the nation",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcWVhclJDU0NDUFJZQ1huVUFwUHI2MC0yN2c4LUlJVkRfZE5hSmp6T2V4WFJ0TXJjZXZFUFNQZHp5b09WTElfc2Jmd2dMc3hUSTN2bm14c0pIenZfRGFNY3VLX0d2SVpreXdCWE5WZkRJVlktdExYQ2lJZER2QlMtMjVTSXVyTGp6UnFMWlBGbUgzcFhyMlRqWXR6cTgySi1xTVQ4Q25saWl1TVlFMGtkSWdkYk5SemQ5dlA0cUhJMEI1eFV5bXc?oc=5",
+     "published": "Thu, 10 Sep 2026 07:00:00 GMT",
+     "source": "California State Portal | CA.gov"
+    }
+   ],
+   "industry_query": "social media AI regulation"
+  },
+  "irobot": {
+   "company": "iRobot",
+   "news": [
+    {
+     "title": "Roomba Maker iRobot Declares Bankruptcy. Its Stock Is Plunging",
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQT1VzMHZqS3ljLW42T1pNaGNUdGdkV1RIMkZLdVcyaVJMUXFYTk0tVFhMdkVUejFrLW5leHB0cmNWVWdfWS1KVUtDaFlJWnY4MWlSdlVQTXJTalE4ekF0NkMxZFhjeHFBWVdqVFlHS0k4ME41TWVmQ1M5aXlYQjdpaWJkbDlRbE1oWklZUXAtdWtXYzkzWUVtOW42RnZLMC1I?oc=5",
+     "published": "Mon, 15 Dec 2025 08:00:00 GMT",
+     "source": "Investopedia"
+    },
+    {
+     "title": "iRobot Announces Strategic Transaction to Drive Long-Term Growth Plan",
+     "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPVjVvZUI2ZTJYb0pWQkxpX0lPb3lJRkxsMzJsZVNKQUpyajZBVWFEYXotZ0NQbzU5WFlzSlAxNVNYZzNQV093VV9SQnNqQjh5Z0ZteUw3SG5SZzJ2UjFDeGFia3RERVhJeFN0bUhneGJkMkVkdEJyTFNiTHVPVDhEeUo2Y0pvQnd1b2ltamhjYkp6WElrRl9wajlpOXFaTUJKeGJocWlKREhaeXhuMzVYMlh0ME9mRFJ5NkVxb3ZCWU9pbU0?oc=5",
+     "published": "Sun, 14 Dec 2025 08:00:00 GMT",
+     "source": "PR Newswire"
+    },
+    {
+     "title": "Can iRobot Stock Hit $11 in 2026?",
+     "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBmeXNFMS13M0QzV2o2Z3dCdlNVZnRMQ3R5OF9ZbGFIbVJQTE1icXdVTmpOd2RLT19TazdWM1RMakRkQVl1WXB0THJxU3I4ZWUxby1tWTV3TjVpMjMzVEN4Yl9sRzFHYV9OVEFmSmlLdjI5dEZjLUl2a2F3?oc=5",
+     "published": "Thu, 11 Dec 2025 08:00:00 GMT",
+     "source": "Yahoo Finance"
+    },
+    {
+     "title": "iRobot Just Filed for Bankruptcy. What Does That Mean for IRBT Stock? And Why Have Investors Been Chasing Shares Higher?",
+     "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNMzhVUUloTXBxcTFlM1prOURLTmhoOGYtWUdWYUlIZk1HNGd1V0RldnhlVVRjV3dKZWE0UUhaRjlDQ1VENEppSVd4eEpQNG1WUWkyakd1SFZLRmd0ckN6NmNaNU1nZThOX0VYWFlCbXVQNnczSzRwUl80dDJUZU9Gd0tnVVllX1Bjb2MtcEhaWnNpVHlxT0xydFZ6Z2Vla3FUalB1NTFQTU9Bek9BU2RXYXRXQU5DSGVTUG5kc2NXdGZrVlQwM0VRZGFiZ0J6R2IzMjBjTmFCZnFNWng5THg5ZVJNdWJkWUdfdkY3MnNDTUprUVdn?oc=5",
+     "published": "Thu, 18 Dec 2025 08:00:00 GMT",
+     "source": "Barchart.com"
+    },
+    {
+     "title": "Why iRobot\u2019s Stock Surged Amid New U.S. Robotics Policy Signals",
+     "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBvSHRYeEhNTXRFWjU2Q1J1Rlh6SjlXRXlPc0huMExzTVFoeHZlOWJEbHRYcEN5M2o0SHUtcUJkMFRwY1p2UVJMQnBvVmJYUnVMX2ZPQUJObU56MUs0c2hwanZwWHhXLWZaR3Y2NE9B?oc=5",
+     "published": "Tue, 09 Dec 2025 08:00:00 GMT",
+     "source": "Vacuum Wars"
+    },
+    {
+     "title": "iRobot stock price collapses as Roomba maker files for Chapter 11 bankruptcy: Here's what happens next",
+     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPR0dKcUQxYi1Fb1FmVGhEcEkzWmE5cUw3VF9JWXNjbkFrWWthTFZNcF9RS202Z2xyNl82X3dRamRXUVRWU3VYZnZCYXhtalZ0QkNPNFpSZHRrODJFRHZGdVJhUF9IbXNkZkd5akNJNWlJdl9VZ3YteGI0VlpsMzlrMEIwRElkTFhJczF4cERIVzJmV3d3SDlKdzZ3SE82R3ZTZVNEWWJR?oc=5",
+     "published": "Mon, 15 Dec 2025 08:00:00 GMT",
+     "source": "Fast Company"
+    }
+   ],
+   "industry": [],
+   "industry_query": null
+  },
+  "enphase-energy": {
+   "company": "Enphase Energy",
+   "news": [
+    {
+     "title": "Enphase Energy, Inc. (E0P.F) Stock Price, News, Quote & History",
+     "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1jZ2JUa09CNVBQMU9MQnR3RGhBTGhjalQ0eUMxMXVPdS1kV0R1aWNteGVidU1ZQk8xc3JwbmotbnhubU9aenpjNGkwSUxDTVJfTEM0?oc=5",
+     "published": "Tue, 06 Oct 2026 21:20:31 GMT",
+     "source": "Yahoo! Finance Canada"
+    },
+    {
+     "title": "Why is Enphase Energy stock rallying today?",
+     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNWEo4Q0NGb2pXak15VWYtRU5qTXpTVGNzQWdYV0VteHpud1pzZ0x4ODRpazQ0akJ4LU5pVE5qWXcxQy1VeHVNYmMyQUJqTnBaNFJRZXVnblVyVkViWWhCYVhjcE9BdUFtcFZSQzFfSTJ5WkJBSldSTU9Fa0w2cnlFLW1hMmpwVFdtLWhnVlR3dU5Sck5Wd2t6bmVzOGVsa2diNHJuSHlNZw?oc=5",
+     "published": "Wed, 30 Sep 2026 15:14:15 GMT",
+     "source": "Investing.com"
+    },
+    {
+     "title": "Why is Enphase Energy (NASDAQ:ENPH) stock in focus as home solar draws eyes?",
+     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUmV3UlNqT29OaVdHNmNiQnBiSzR0QUw1TDNiVlV0b1ZGQmFRbDZlY1NDUm9mRGp3MkNIS1ZRUm5aT1o0SFV3RUM1Z2RRSzRZRll6S2tNa0tOaG0ycFg5ODZoOG9CT3ltM19iYzhCZzhDMHVQU29WQURCRWxVV09iMDRsRXozQUV6M0JCU0JfaWduRFlVV2xoLU5qam5WaW1UQlVIZFdXQldOcWtJVUM3V2UyYzc?oc=5",
+     "published": "Mon, 05 Oct 2026 17:57:00 GMT",
+     "source": "Kalkine Media"
+    },
+    {
+     "title": "Enphase Energy Inc. stock outperforms competitors on strong trading day",
+     "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQWUdkenVjb0RyOUZOWmpmV2pFMC1pZlBPckV2MlVyZjRrTWNtMWdPVkxwbFpFSk5SMndOb25PNmZYZFp3dmtyc3U2a0Nfb0dwY3h6c1Nib2psdzRXM29qbXlVOHE0d04zNUJaallJd1FlLU11TEpBZ0JpRjczUTAzb1RrbVVkRGxOTmJwOGUycy1XQWRkWUQtRnVtb2t6aHF0Z3NRaVBKWUwyRXdUZHRLbzlqbzAzR3JjSFpDSDQtUGUzXzZZMnl4X1dDMGJaOGkxYXA2YzMydUVVYkx1M3BadHR3?oc=5",
+     "published": "Fri, 02 Oct 2026 21:23:00 GMT",
+     "source": "MarketWatch"
+    },
+    {
+     "title": "Enphase Energy (NASDAQ:ENPH) Stock Jumps 4.9% - Here's What Happened",
+     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPaFJsSkhwajVyNHhoMEZCUnM1ZXdjU2gwb2xtUjBLaklRTzNISi1VZG9tMXlvaVUtZ29ncGJucDYyZmt6UG91aGhxRDlQa0dEbmpTZXpXWGQ5d19rbld2dGo5dE15R2J6S1F4SFhtQnVwY3dGMmZCYXVYakwzUmRKZnQwSTlSZDBIc0hick1aVU1USmMzQU8xdTI5S1E1djk5NmppREE4OUEwWUFVNWZRUGkyNmZBQjNBbGxqZm9B?oc=5",
+     "published": "Wed, 30 Sep 2026 15:52:41 GMT",
+     "source": "MarketBeat"
+    },
+    {
+     "title": "Learn Why The Bull Case For Enphase Energy Stock Could Change Following Utility Approval",
+     "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNeGxFUVYwX0ktS0JDYjJqaVZwTjlxMmlkSldTekZ3enVKNU1neTFLeWRYdDNGWE5WY0xyZFlKaWdGeHZobURZWWJ1eGFFcGQtcncwbEFXeHd5TF9hODM0WS1SRXI4Y0RMWlNIeXE5aFhTWm5CUTg3UkdIX3E4Y3dfcXRHUFpLX1Nua1VqMmNoWmNrc0twc3NIMHlVakVJekZ0TE93cVFTbTZ2Ry02NDlZazhCR0dkT1J5anRNbFFJS3hwcXRuc082WDdUVUgzZmktS3hlNU5R0gHbAUFVX3lxTE5rZ2ZvM2liSmQ2Yk1fWWMzVDZhbXdfUHJsWG1RZ3p6X28yVFljT0F1RjN6dEJaalZqMENpWkFHQTNYWkQzb3Y5UVFUWHpqY2RjUkFvMUVJZ24zVTV3RkJ1RDZxallnMVpYOTJsOVpjZDZGYUR5c2c1UzU5M2lvTk5tT2t2dkpPSndWZzhva3N5Si1Cd0oxSXZRUnpFWTFHQ2Z1RUJwOTRvTHF1a2plMzJQaXU0SDR3WUxTY2dsYjE5N1hLaDRJMlJzODRrNmxsWmNrX2F1R0RtdGVNSQ?oc=5",
+     "published": "Wed, 30 Sep 2026 10:41:46 GMT",
+     "source": "Simply Wall Street"
+    }
+   ],
+   "industry": [
+    {
+     "title": "A New Generation of Solar Panels Could Produce 25% More Electricity and Shake Up the Global Energy Industry",
+     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNSmVHQU9TWWRjZl9ISnRsRjB0VkJneHBaWkxQcDhyVURFS2tMbC1QVjVIdzY4RDMxb19hbmxISVloM2FvcXVnSkRseWRLRTVkNjlzWDB1cjVNNG5qNUdvclgzSENjMWJPenlZelR2ckVYRng1TlA1NjV2RnA0cGQ4bmMyR3J5cGNQc20yVW42LTVfc1U?oc=5",
+     "published": "Tue, 06 Oct 2026 16:37:25 GMT",
+     "source": "ZME Science"
+    },
+    {
+     "title": "US Solar Panel Makers Try to Catch China With a Big Leap in Technology",
+     "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPWXg5WXJhQ29jY2xtUGRWdndidTNUdFlCRi16c201RGpyM0VwdHZvNGN4Y2l0el9ubmxnc0x5dWtmd2JRR01GRHRjSFNuMk9aeXYtYzNvTDR6MW1HWUtNT3E4ZEpZT1lXMW4zT00xRG9UbGI4OHNNbkdUMjFzdHdBWmNKUWhzUWpabDhSMXg5ckZkWVFTRWE5SkVBclA?oc=5",
+     "published": "Mon, 05 Oct 2026 09:00:25 GMT",
+     "source": "The New York Times"
+    },
+    {
+     "title": "Solar power helps Amazon communities ditch diesel and prepare for El Ni\u00f1o drought",
+     "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNZjBOcm9IUy1SUjdndkxzQzFoVXllS3FQemkwX0dIY3l0RnBOQkJ0YjM2R1NsR3lra3NldUNkRUhObGdpVGdDOHNSX2JjeFlFOTZmQXJlTV9yd0dhNHNVZ2R0SkZVOFZaRHBDemtuRWZNc0N4dGFraEdOdGNYNkd2QTRLbU5ZNGJBamRxNHRaRGVtTmU5YloyaHNnVjctbkxYLTFQUDdWRVRGaHR2Qk40Z2QzWmpZUHpsQVhZalRkZE15RDhLa05RVw?oc=5",
+     "published": "Tue, 06 Oct 2026 13:01:00 GMT",
+     "source": "Audacy"
+    },
+    {
+     "title": "How to Hire Veterans in Solar Energy",
+     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0wV0lsaDFHbkM2cVlONllucHRsdml1S1prdTBMUGdmd1F5ODRnOXJfSDRUY3ZlQXQtQ0hpV3JmQlNwc3FkdHFhVzlNdVg4NkFlWFplUENaTDEzUllZZzdYUVlSTmRCUlVQdlZNRjFUVTFzOGFl?oc=5",
+     "published": "Wed, 30 Sep 2026 19:31:24 GMT",
+     "source": "Department of Energy (.gov)"
+    }
+   ],
+   "industry_query": "solar energy industry"
+  },
+  "mastercard": {
+   "company": "Mastercard",
+   "news": [
+    {
+     "title": "Visa vs. Mastercard: Does a 241% Return on Equity Make Mastercard the Better Buy?",
+     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQNEdjM3AwVmRiaG1JUVk2VHQzZloxYVBvOEVqeWttZjRaX0s3WFB3a3R2cDFKTVZIZ2xESDZoRWRzZ295S3NDLXNkVjZ6OXo1Q3h1c1kxZHphMUF5TDhQblc3SWpNWC1hZkRMd3hEZTAySDNBSUY1V3J1Q2tnalB6TTc0cnYzZDVPZVJnaWNTOEhCb0QyT1p3?oc=5",
+     "published": "Wed, 07 Oct 2026 02:42:00 GMT",
+     "source": "Yahoo Finance"
+    },
+    {
+     "title": "Mastercard can sell Rezolve Ai subscriptions worldwide",
+     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPVEtyUU05Y1l1akFBS1BKZ08zelRHVVR3cDB5eUhxd2VHY2dtLWhQM3Z0Q1lrT2VvQUFJNHllSUxpRnI0WnktUnp5XzlZaXBvYmdsNTE2SlNvdXlMcFV6OHZxbmh1Rm1MVE10RmRBU0p3T0FtdWpaVXRpdU5xMHFXbEl4WGxpRU9sb3JXeWVnWG9VU1B6d250THZxTFlIcjVnbWdmNnF1dWM2NEJCZXlaY2RhZzFySEFHY2M0?oc=5",
+     "published": "Mon, 05 Oct 2026 12:00:00 GMT",
+     "source": "Stock Titan"
+    },
+    {
+     "title": "Mapping the Market: Warnings of more losses for Mastercard shares, but ray of hope for bulls",
+     "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5wLWdzSUVnWS1CZTVLVjJmZ1BiZTFZVDBva2NhYlNkZGY4S0JUOTRPVzF3d3RvX0FmNVBCNlpoUkliZ21hV3lZTmVHOEY0cHlQbEI0aTdrU1I2SVZ4TTVQelpoMlNQQWVhVEh6QjdzVzZxQi1WWmFFMw?oc=5",
+     "published": "Fri, 02 Oct 2026 10:09:43 GMT",
+     "source": "Reuters"
+    },
+    {
+     "title": "Visa And Mastercard Are At Risk Of Being Disrupted. It's Time To Underweight Them.",
+     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQbW5kb0RraExFZF91M2xNb2R2MTlZWkthYndRQnpZZU0tTnZvUXdiUDdUR25qakNKVzhkTTRuVTdkZkpEVDVwQlJPaElxUkY4TzgzeHVyZEQ2SVNZU0NrX3d3QVJZajRBWi1NUklTRDBmZzNjUjZLUlQ1MFoyTThyTGFmOEFQcFRzbHlSeV9fMC1aRFlwdkR3SUZyYXRyRDcxaU5vYzF3?oc=5",
+     "published": "Tue, 06 Oct 2026 18:47:35 GMT",
+     "source": "Seeking Alpha"
+    },
+    {
+     "title": "Rezolve AI stock jumps on Mastercard reseller agreement",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQY1Q1RlpNa0NJbFprbXRxckdVdzNmRUc2eXljVGZ6c2xiMVBKZ1R2VFU0WTNmOVVRdEoxbWVkYlh0SUhhaUllTTFKNXdyNUxsdC1oUXF5MWJXSllXZ2xGazBkc1RzUGx1NmhTSnRydDY0OVJxbjV2NU00T1AwY0FWMnNDeC1sNmgwZmlXcnJ4QlRQdDRPQXNDSHZuNThsWlMyRk9qTEZ1TFh5TFVXbk1hSmZR?oc=5",
+     "published": "Mon, 05 Oct 2026 22:05:01 GMT",
+     "source": "Investing.com"
+    },
+    {
+     "title": "Mastercard Inc. stock outperforms competitors on strong trading day",
+     "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPNGNwc2dBZlNUY2ZETFAwR0ZwZEFiSmdUM01lVGFQaVMyTjJCRDVuQ01haFlNVUhXZXh5SlNGc3NhRlNqMlJjdXI1cjR0aVdYcTVRcDR5RlY5UE44cU80alI4ZUlKMGRHejdYTklzdHU4RjIyZVFIWFFvQVNTMjY3LXYwNk04cVlycjBIaEF4bzJMeFRnNlFjMHJFMGlacXdTM1VsN2tjSnEwT3F0bVp2OTR6TkhWQWZQZkR0QVczWU44STd4MHQxSWN6N2VzU2hIajhJZlNTWFJOWF9N?oc=5",
+     "published": "Mon, 05 Oct 2026 20:31:00 GMT",
+     "source": "MarketWatch"
+    }
+   ],
+   "industry": [
+    {
+     "title": "Fintechs press for Fed access",
+     "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9mUkQ2QnpnRVNEakRWbDlyZjU0TE1WbU5HMW5wcVVrd1NSTXZ4dEVHM3JGRTFGbVlOeTZYTE1GNDIxSG84STBlaWpBbTlZWU9FeEJnU0d1aVFhanVHZEd2UXFfYml2S0ZUeHZsdEhCN2MwenZCVElraEMzMA?oc=5",
+     "published": "Tue, 06 Oct 2026 15:29:58 GMT",
+     "source": "Payments Dive"
+    },
+    {
+     "title": "Congress Divided on Fintech Regulation in Payments Hearing",
+     "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5wNmx1SVdwWkxQYmpvRWc4N1lsTS1yUDU2MDBLb3ZrU0kwbW5PTWIyMGxpdm0yblB1c2FWZEw1RnM1alJ0SG1sTTVrd253RFdvMk82N3hWVDlYTHNqeTdyamRVTllkYVRVc3czTk43SVdtZGlkZW1v?oc=5",
+     "published": "Tue, 30 Jun 2026 07:00:00 GMT",
+     "source": "Legis1"
+    },
+    {
+     "title": "Europe Agreed on Its New Payment Rules Ten Months Ago. Not One of Them Applies Yet.",
+     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPcVFoWmZ5VFMyM053MlRMUTJFOUVUQUszbzBodGNXTEFRY0VzRFJmcDFoTl84d1dSeWZkWm9rRHVJUmwtTWZSRkFqRWFWRkVPY2N4Q1FBYzFGc1A5OTJYM0xPR0NXVHdFSld3RndMUkZwNTF1N0tqZ2xDRmJLYmF0aUEtWEZ0RXlQOXMxNDFLOXhOM0o3OTFfd1FsN3ZZNWpSdXlmS3NzQ2cxOV9XTmc?oc=5",
+     "published": "Fri, 02 Oct 2026 11:54:00 GMT",
+     "source": "FinTech Weekly"
+    },
+    {
+     "title": "White House Executive Order Signals Major Shift in Federal Policy for Fintechs and Payment Systems",
+     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQNkVwZnZSdHowT195ZFhNdmNEdk5xLWVJb004Y2VIcDI0bzNNcXJmb1c3cHdmbHZpSjZoMkE0RW1lbEtnOXZlVzhudWE4dnBSMEd0OTJUOEYxcmNNLTduQ3JlekZmWEZKWVB2X2JqbU45ajhSZzhBSVkwMXF6cHJsTmcwTmNKQTZoRHYxUjVnMGlFTHQtQk1PVjRiR2NNTUNybVpUVFFlNlJWa2dPTExSbDFaNFVNbkx6TkM3XzMwUTJRcHlZSzNyem12T0w2VXZjT2JPVUE2VDZGdUtZNzBfanNaaw?oc=5",
+     "published": "Thu, 21 May 2026 07:00:00 GMT",
+     "source": "Consumer Finance Monitor"
+    }
+   ],
+   "industry_query": "payments fintech regulation"
+  },
+  "lanzatech": {
+   "company": "LanzaTech",
+   "news": [
+    {
+     "title": "LNZA 8-K Filings - LanzaTech Global, Inc. SEC 8-K",
+     "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1lNVVWX3BtV2M4LXE0YXZHVldyaFloTmlQek1mbGRHa3dmZTAwa0FUbTlwZHJ4LVEtMU0wS3ppWlF1Q3JhRExQLUVldmI1R2FiSm9rbTlqVGZHczNxdVBkUkRn?oc=5",
+     "published": "Tue, 06 Oct 2026 00:02:44 GMT",
+     "source": "Stock Titan"
+    },
+    {
+     "title": "Beijing Shougang LanzaTech Technology Co., Ltd. (2553.HK) Stock Price, News, Quote & History",
+     "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9ldUNoQ3U5VW0tY0ZuVTRLT1FFcGx4eFdpQm85WmtzeDY0emVlWTcwV1lDSDlCZklGaGp5U0tWODJBWXplWkg1WHpiWFFGUk9KdFhrNmFNaHVjaVJnRkFaeVIwUk8?oc=5",
+     "published": "Sun, 04 Oct 2026 05:52:04 GMT",
+     "source": "Yahoo! Finance Canada"
+    },
+    {
+     "title": "LANZATECH GLOBAL ($LNZA) Releases Q2 2026 Earnings",
+     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOYUp5d0tfejVoSW5QaWQ5d3pJd3VaNjQyZVVOYmRpZEY5TnQ3OFNWVWo0Wml5eDFWY1hKamhDaE9XZmtzOThxRDlaejlKV3JoeXRDTkprWHQxWU5VUE85NjBmNHl1YWtwRFN6dDVtUFR3M25LRm1JNEhUMGpNVjAwcDRoT3V4S0VLeG5nemNkSVcwR1U?oc=5",
+     "published": "Fri, 14 Aug 2026 07:00:00 GMT",
+     "source": "Quiver Quantitative"
+    },
+    {
+     "title": "LanzaTech Global posts $9.0M Q2 revenue, $184.3M net income driven by equity remeasurement",
+     "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPZFdmcUZFMVF6YzBibVBSQ1pfMTVIUWh1NFhRQ1dOai00WjJnLWpKbjhGQUEzRWlwell1dDV4UGxoYlQwUkhucWR5d1A2Q0VwZUk1M01RYjZ0VE94X0s1ZlhJbzhSRXpNMTdkMDl2N0hXRnAwcmNWUkVxNGZpTmx2YmZhMVVKbUtfNWhHSmJZZDZaYzBJM2tZVnB3NmlfT0xyMFZnVVVzREY0TkpGNWtIMmk5LVRMcTBzZGpkUkxXMDh4eDk4RERoWlVQZ1k2bXlNZmdWMmhMTXJLXy1TRTFUeVFRdw?oc=5",
+     "published": "Fri, 14 Aug 2026 07:00:00 GMT",
+     "source": "TradingView"
+    },
+    {
+     "title": "LanzaTech Announces $20 Million Registered Direct Offering of Common Stock",
+     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9ydzlsdDNseklrWEktRE1ZUXdLaDBRb0dTUmFmU2xRVE9VLWI1SHQxdlJuaG0zVURjRDMyaWNhVVl3S0RXUzkwMHI4SDB3WEZUYktGbnltZ1c1M0E?oc=5",
+     "published": "Fri, 15 May 2026 07:00:00 GMT",
+     "source": "Energy Digital"
+    },
+    {
+     "title": "LNZA",
+     "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5rUlZzZW1BanNJYXNDMnRmS2FZblc0OHR3YnF3d1RnemdqMk1PRklnT3k3SElxZ0Y2dk1FU05BM2Z4WC1DR2c?oc=5",
+     "published": "Tue, 26 May 2026 13:03:42 GMT",
+     "source": "Finviz"
+    }
+   ],
+   "industry": [
+    {
+     "title": "Gevo scraps clean jet fuel, carbon capture project in South Dakota",
+     "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOWGNzYmd3dUh4NThYNV82dV83S2dwMGlOTnMzNjB0SVVrQ2kxdERuYmJvSW5pejhzRDlBZ0lwamhRVFh6WHRHREFRV3F4T0xURE42MENzX3lmZG00Q2FGemRuMTVjTVhKeFFUcEJKUVI4ZlppampwUGN0a0gxaDhibWpIX2p4bG1HVGdVT3dSZ2dMYVZWRTBOQUwyUGx5OFlOcEhjUldELVB6cVd2eDI0MTJqbHJRR3J2N0t2MFA4Y3l4WW53VUhBa0czMWJqOTdSd01CSEZLRWFRREc4aF9CTjFCR2U0UQ?oc=5",
+     "published": "Fri, 07 Aug 2026 07:00:00 GMT",
+     "source": "S&P Global"
+    },
+    {
+     "title": "Syzygy Plasmonics Signs Agreement With Uniper For Latin American SAF",
+     "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQY0pkNW1kOE5kR2k4LWFuWnpGcVVERW1MdXNZMFk5clkwYnNzeUp1YU1BQkFPMWNmcWlpT0wwY3kyZWZMdzhINXV6NWFpRDJvTHVZOTd2VTg1dGhOenpDTlNrcklzOVBXZjU4U2FKRkpuZVVQQjU3RDhFaTVfSGlRcFprQVhwSUtyM3lETDFHSTNsUjZ4U0hiend3?oc=5",
+     "published": "Fri, 02 Oct 2026 12:53:14 GMT",
+     "source": "Carbon Herald"
+    },
+    {
+     "title": "Why is Gevo (NASDAQ:GEVO) stock in focus as its clean-fuel credit sale lands?",
+     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNYXBFb1Q1cDlPVnFaVW1KcFVOZjJpSmxWWTczTUFMdDFFVTRtamNFLW1jTXZ2Y2VOODNrZlZlamJfTE1kNW5ROE4zb0lEUWtCZGs0NWNoSElnTEUyVHZuM2FoTXQ4TldPY05JOXhFbEJCWlNQaWFKYXBOTm8tT09lcXlGLVQzZk03WWNUV2REQzR1eks4QmRYRGNkUU5lekVxdkV4bkZPRklfWkpUb05HdFBSWlc?oc=5",
+     "published": "Mon, 05 Oct 2026 18:22:00 GMT",
+     "source": "Kalkine Media"
+    },
+    {
+     "title": "Sustainable Aviation Fuel Market Size, Outlook Report, 2026",
+     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNekJJMU1MUHdXU2I3b1ozMnJ0MkdSMEkxTnZkYlU2TXJGcjBobGlvNDFjRF93VFl5WmYxcU5JVkVsQUhiOVc4aUd3b3dpMzE1VENPeUNfT3E2Q3JtTV85TXF0N0pEUVlMcklleDdqaHlxMllmOFJYeFQwbnc3NEk0Ry1qMmRRNFNMUjdZ?oc=5",
+     "published": "Mon, 14 Sep 2026 07:00:00 GMT",
+     "source": "Fortune Business Insights"
+    }
+   ],
+   "industry_query": "sustainable aviation fuel carbon capture"
+  },
+  "tobii-ab": {
+   "company": "Tobii AB",
+   "news": [
+    {
+     "title": "24T Forecast \u2014 Price Target \u2014 Prediction for 2027",
+     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5XYUJ6RVpsWmpwNndwMXYzVFl4LWh2WUV2eDF1NmdrTjZmbmd1UmdkS2htYnNpSUxOdkl5RkZ6OVg5WlNlM0VQbmVkTlYwalhwVlRQVkZvN2dHNlh0RUdYQzZVMk9LaDU1TkZkanJkTHoxc3FL?oc=5",
+     "published": "Tue, 29 Sep 2026 19:02:49 GMT",
+     "source": "TradingView"
+    },
+    {
+     "title": "Tobii AB (TBIIF) Q3 2022 Earnings Report - Results, Call & Slides",
+     "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBSdVJ1WXFNV3FPMlpIZHdOS1FtaDlNRVdENkxwUXJBbHd4eEVCMEtSRDVIaU1IN2pWSkxuOFR2dnQxaUJ3Q1pRS2NQS0FsaWp1a1hKLXhUVXpfU3pNVDF1elJ1dXRHOUdaelVmcXFn?oc=5",
+     "published": "Sat, 03 Oct 2026 15:40:16 GMT",
+     "source": "TipRanks"
+    },
+    {
+     "title": "Tobii (OM:TOBII) Stock Price",
+     "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE45d25JMWZiTzBnbnViZ0tSZkxROGsySllIZ01lOUEyYWlGNVVlSnBobVQ0U24zdjF0VmdWX05xZlgtY2czTzNxOW4zSjY?oc=5",
+     "published": "Thu, 03 Sep 2026 07:00:00 GMT",
+     "source": "Simply Wall Street"
+    },
+    {
+     "title": "Tobii AB (publ) 2026 Q2 - Results - Earnings Call Presentation (OTCMKTS:TBIIF) 2026-09-01",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQak1ySk9MQUgyUmZWZ3Z2R0tKZ0VsWG1fZEdZbnB3R2NnSTdSeko4RTJScFZsc2ZvUElzRWNXY1JqeEpaVnJPVEZqMERlM1RybmlWaHNTSmxXal93bVBERUI1ZFhmVjdBRTBoUWM0R24xcFFPU0pDN0ktX24yMUdUd094bDUtMVpTS1pmTGJwa2xIeDV3VGJCQ0ExOHFTZw?oc=5",
+     "published": "Tue, 01 Sep 2026 07:00:00 GMT",
+     "source": "Seeking Alpha"
+    },
+    {
+     "title": "Earnings call transcript: Tobii meets Q2 2026 estimates as shares sink",
+     "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQSlljdGlUNkxmRGRmZ3NqdlNkWWhiOU1Kd0NiNlhkS0ticXYwY0hpY2hxUWNfV2NwMEJqWkNjWXRQUG52T1lSQTBIa3RrSFNYNGhqTVZEYzZyYnZ4clAtOUFLMkhYNUVHbWZORlVuMkFWUU15Wkg5X18xVUNOR1dUTnllbGxDQW9mX0w1aHFETnp1WHdkSTFUY2dmZmhCSFpneUx2c3ZnVmtLTzQ3UXNMMHpudi1Pci1RRmRCTFFReEdQdHc?oc=5",
+     "published": "Fri, 28 Aug 2026 07:00:00 GMT",
+     "source": "Investing.com"
+    },
+    {
+     "title": "Net current asset value per share of Tobii AB \u2013 HAN:24T",
+     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNcEN0T2x6OC1YWFFhdWRjYkxPUGQ1T1hDZVMzYjM5RkxMVU1DTUFTNDNtMFc4djM5WkFjeW1rNExXdVJFOGZNOVpuRWdPRDB4YVJGYnM2VlpKcGFmWkMzcDVhLTdKWVFodTZRYUFPZGtWZ1plWnFmbFg5ai1pZUIzZHBYOUdZRkdLRXBlZzRJeENBU2Qw?oc=5",
+     "published": "Tue, 29 Sep 2026 21:25:12 GMT",
+     "source": "TradingView"
+    }
+   ],
+   "industry": [
+    {
+     "title": "Eye tracking in virtual reality for neurorehabilitation: a narrative perspective on needs, challenges, and pathways beyond game engines",
+     "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNWlJwd0hrc09ycnVRN3lqVnRQekx2Y2lURnIzSDB6ZjhVV2NGT0poejU5OHNJVFF2OHpDdWg3ZWcyOEsydjlZeG1tcmRoVDBDT1l2MmRlNUdhSTdaUElWcGpXM1BsSE80NV9xWHY1ZGhLM3NiRDlWU3QxeDVRRU50RDRxYzdfNDNMQ1BROGZFcFI3czhXalYwSw?oc=5",
+     "published": "Thu, 12 Feb 2026 21:25:50 GMT",
+     "source": "Frontiers"
+    },
+    {
+     "title": "I Wore Meta\u2019s New $1,299 VR Glasses: A Tiny Quest, or Vision Pro to Go?",
+     "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBUOXB4UHNoUmZ0a19nRmlqdHhHWjNwMU0zbllEY1gwZkNSdWMzdVlkdGMxckRuMXFnTEF5VXNlRkRsMWQxTGxDWHdSYThoV3ZYal9fT1J3NTAtTVdkcGNoaUxoNWpoZm8tNmo1d25iVktERHJCRHF6VWctQ1A?oc=5",
+     "published": "Wed, 23 Sep 2026 07:00:00 GMT",
+     "source": "CNET"
+    },
+    {
+     "title": "Meta Announces \u2018VR Glasses\u2019 Next-Gen XR Headset, Priced at $1,300",
+     "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5aY2MtczRXbDRJZkJCelRSdFZjTXgxTjlocmZMN1NpNlM2R3BkdVNRcXMzcjg0RWlOckRLRjZmZTREQzYyY25pWUVHT1hEREx1eFlTMFp2TGJObHl4eG9iQzBJT2xraS1adFhKUlVZcmdMZTA?oc=5",
+     "published": "Wed, 23 Sep 2026 07:00:00 GMT",
+     "source": "Road to VR"
+    },
+    {
+     "title": "The biggest misconception about vision? That you see reality",
+     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNZngxNy00Y3pJd1ZPNHIxczdlanZ6b0hEWXNqT1dnV3hsd0J6UlF3Ql83UVA2M045SUpKdmxQSEVNb1B2Z0hXZy0zeWNta0UtWGxkdndhNWVvaFgtS19ILS1pNGoxbFhEVVNpeWZrbFRBVlV3M2ZjZGU2Mm1pMzVOVEl4eTZ1dXpIQ3ExWGFIXzJjV3VBSWlYSklSMW84VzEtbDhjSW5EdnE3X3RpLTVZ?oc=5",
+     "published": "Mon, 29 Jun 2026 07:00:00 GMT",
+     "source": "University of Rochester"
+    }
+   ],
+   "industry_query": "eye tracking AR VR"
+  }
+ }
+}

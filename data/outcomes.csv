@@ -2,5 +2,8 @@ company,outcome,outcome_year,peak_valuation_usd,ticker,source_url,notes
 Spotify,ipo,2018,,SPOT,https://en.wikipedia.org/wiki/Spotify,Direct listing NYSE 2018
 Airbnb,ipo,2020,,ABNB,https://en.wikipedia.org/wiki/Airbnb,IPO Dec 2020
 Wise,ipo,2021,,WISE,https://en.wikipedia.org/wiki/Wise,Direct listing LSE 2021
-Enphase Energy,ipo,2010,,ENPH,https://en.wikipedia.org/wiki/Enphase_Energy,IPO 2010
+Enphase Energy,ipo,2012,,ENPH,https://en.wikipedia.org/wiki/Enphase_Energy,IPO 2010
 Alphabet,ipo,2004,,GOOGL,https://en.wikipedia.org/wiki/Google,IPO 2004 as Google
+Mastercard,ipo,2006,,MA,https://en.wikipedia.org/wiki/Mastercard,IPO May 2006
+LanzaTech,ipo,2023,,LNZA,https://en.wikipedia.org/wiki/LanzaTech,SPAC Feb 2023
+Tobii AB,ipo,2015,,TOBII.ST,https://en.wikipedia.org/wiki/Tobii,IPO Apr 2015 Stockholm

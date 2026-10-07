@@ -335,6 +335,45 @@
     tb.appendChild(frag);
   }
 
+  // ---- IPO'd Alumni: seasoned public companies ----
+  function slug(s) { return String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+  function renderIPO() {
+    const grid = $('#ipo-grid'); if (!grid) return; grid.innerHTML = '';
+    const rows = D.seasoned || [];
+    const newsBy = ((D.news || {}).companies) || {};
+    if (!rows.length) { grid.innerHTML = '<p class="muted" style="padding:2rem;text-align:center">No seasoned analysis yet — run scripts/seasoned.py.</p>'; return; }
+    const fmtP = v => { if (v == null || v === '') return '—'; const n = Number(v); if (isNaN(n)) return '—'; const c = n > 0 ? 'pos' : n < 0 ? 'neg' : ''; return `<span class="${c}">${n > 0 ? '+' : ''}${(n * 100).toFixed(n > 10 || n < -10 ? 0 : 1)}%</span>`; };
+    const frag = document.createDocumentFragment();
+    rows.forEach(r => {
+      const card = document.createElement('div');
+      card.className = 'ipo-card';
+      const nb = newsBy[slug(r.company)] || {};
+      const news = (nb.news || []).slice(0, 4);
+      const ind = (nb.industry || []).slice(0, 3);
+      card.innerHTML = `
+        <div class="ipo-head">
+          <span class="ipo-name">${esc(r.company)}</span>
+          <span class="ipo-ticker">${esc(r.ticker || '')}</span>
+          <span class="ipo-years">${esc(r.years_public)} yrs public · IPO ${esc(r.ipo_date || '')}</span>
+        </div>
+        <div class="ipo-state">${esc(r.state || '')}</div>
+        <div class="ipo-stats">
+          <div class="ipo-stat"><span class="k">Since IPO</span><span class="v">${fmtP(r.return_since_ipo)}</span></div>
+          <div class="ipo-stat"><span class="k">vs S&P 500</span><span class="v">${fmtP(r.excess_vs_sp500)}</span></div>
+          <div class="ipo-stat"><span class="k">From all-time high</span><span class="v">${fmtP(r.drawdown_from_ath)}</span></div>
+          <div class="ipo-stat"><span class="k">1-yr momentum</span><span class="v">${fmtP(r.momentum_1y)}</span></div>
+          <div class="ipo-stat"><span class="k">52-wk range spot</span><span class="v">${r.range_position_52w != null ? Math.round(Number(r.range_position_52w) * 100) + '% up the range' : '—'}</span></div>
+          <div class="ipo-stat"><span class="k">Annual volatility</span><span class="v">${r.volatility_ann != null ? Math.round(Number(r.volatility_ann) * 100) + '%' : '—'}</span></div>
+        </div>
+        <div class="ipo-outlook"><span class="t">12-mo setup: ${esc(r.outlook || '—')}</span> — ${esc(r.outlook_why || '')} <span class="muted" style="font-size:0.75rem">(mechanical read, not a prediction)</span></div>
+        ${news.length ? `<div class="ipo-news"><h4>Latest headlines</h4><ul>${news.map(n => `<li><a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}</a> <span class="src">· ${esc(n.source || '')}</span></li>`).join('')}</ul></div>` : ''}
+        ${ind.length ? `<div class="ipo-industry"><h4>Industry: ${esc(nb.industry_query || 'sector')}</h4><ul>${ind.map(n => `<li><a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}</a> <span class="src">· ${esc(n.source || '')}</span></li>`).join('')}</ul></div>` : ''}
+      `;
+      frag.appendChild(card);
+    });
+    grid.appendChild(frag);
+  }
+
   // ---- Disclaimer dismiss ----
   const dclose = $('#disclaimer-close');
   if (dclose) dclose.addEventListener('click', () => { const b = $('#disclaimer-banner'); if (b) b.style.display = 'none'; });
@@ -343,6 +382,7 @@
   renderMethodology();
   renderLineage();
   renderLeaderboard();
+  renderIPO();
   renderEventLegend();
   rebuildCharts();
   refresh();

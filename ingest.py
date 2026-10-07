@@ -527,9 +527,23 @@ def main(folder=DEFAULT_FOLDER):
          "hit_rate": round(list_wins.get(lid, 0) / cnt, 3) if cnt else 0}
         for lid, cnt in sorted(list_counts.items(), key=lambda x: -x[1])
     ]
+    # seasoned alumni analysis + news feed for the IPO'd section
+    seasoned = []
+    seasoned_path = os.path.join(BASE, "results", "seasoned.csv")
+    if os.path.exists(seasoned_path):
+        import csv as _csv
+        with open(seasoned_path, newline="", encoding="utf-8") as f:
+            seasoned = list(_csv.DictReader(f))
+    news_bundle = {}
+    news_path = os.path.join(BASE, "data", "news", "news.json")
+    if os.path.exists(news_path):
+        with open(news_path, encoding="utf-8") as f:
+            news_bundle = json.load(f)
     payload = {
         "generated_at": ts, "headers": headers, "companies": merged, "count": len(merged),
         "lists": lists_meta,
+        "seasoned": seasoned,
+        "news": news_bundle,
         "quarantined_count": len(quarantined),
         "quarantined_sample": [{"company": q["company"], "reason": q["reason"]} for q in quarantined[:25]],
         "methodology": meth_lines, "colored_summary": colored_sum or [],

@@ -93,6 +93,7 @@
       <button class="tab active" role="tab" data-tab="colored">Master Pipeline Tracker</button>
       <button class="tab" role="tab" data-tab="graded">Graded Pipeline <span class="tab-tag"> · </span></button>
       <button class="tab" role="tab" data-tab="leaderboard">List Leaderboard</button>
+      <button class="tab" role="tab" data-tab="ipo">IPO'd Alumni</button>
       <button class="tab" role="tab" data-tab="methodology">Methodology <span class="tab-tag"> · </span></button>
       <button class="tab" role="tab" data-tab="lineage">System &amp; Data Lineage</button>
     </div>
@@ -156,6 +157,15 @@
           <tbody></tbody>
         </table>
       </div>
+    </div>
+
+    <!-- IPO'd Alumni: seasoned public companies with full analysis -->
+    <div class="tab-panel" id="tab-ipo" role="tabpanel">
+      <div class="card-head" style="margin-bottom:1rem">
+        <h2>IPO'd Alumni — seasoned and cooking?</h2>
+        <span class="card-sub">Spotlight-list companies that went public years ago: years public, lifetime returns vs the S&P 500, current drawdown, momentum, a 12-month setup read, latest headlines, and industry context. Prices update when the fetcher runs; news refreshes weekly. Not investment advice — backward-looking research.</span>
+      </div>
+      <div id="ipo-grid" class="ipo-grid"></div>
     </div>
 
     <!-- Methodology view (Graded, 2nd tab) -->
