@@ -34,7 +34,7 @@
 </div>
 <script>
 (function(){
-  var KEY='agreewall-'+location.hostname+'-v1';
+  var KEY='agreewall-'+location.hostname+location.pathname+'-v1';
   var wall=document.getElementById('agreewall');
   var done=false;
   try{ done=localStorage.getItem(KEY)==='1'; }catch(e){}
