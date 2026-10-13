@@ -97,6 +97,7 @@
       <button class="tab" role="tab" data-tab="playbook">Winner's Playbook</button>
       <button class="tab" role="tab" data-tab="methodology">Methodology <span class="tab-tag"> · </span></button>
       <button class="tab" role="tab" data-tab="lineage">System &amp; Data Lineage</button>
+      <button class="tab" role="tab" data-tab="aqos">AQ-OS Terminal</button>
     </div>
 
     <!-- Controls -->
@@ -211,6 +212,79 @@
     </div>
   </section>
 
+    <!-- AQ-OS terminal (californiaQ page, coded in as a first-class tab) -->
+    <div class="tab-panel" id="tab-aqos" role="tabpanel">
+      <div class="aq-wrap">
+        <header class="aq-head">
+          <div class="aq-title">
+            <span class="aq-pulse" id="aqPulse"></span>
+            <span>AQ-OS // SYSTEM DESK INFRASTRUCTURE TERMINAL</span>
+            <span class="aq-feedchip" id="aqFeedChip">FEED: PAPER SIM</span>
+          </div>
+          <div class="aq-headctl">
+            <div class="aq-modeswitch" role="group" aria-label="System mode">
+              <button type="button" id="aqModePaper" class="aq-modebtn active">PAPER TRADE (ACTIVE ON LAUNCH)</button>
+              <button type="button" id="aqModeLive" class="aq-modebtn">⚡ SECURE LIVE TRANSITION</button>
+            </div>
+            <label class="aq-capital">START CAPITAL USD:
+              <input type="number" id="aqCapital" value="20.00" step="1.00" min="1.00">
+            </label>
+          </div>
+          <div class="aq-state">SYSTEM STATE: <span class="aq-accent">SELF-CALIBRATED</span> | UTC CLOCK: <span id="aqClock">—</span></div>
+        </header>
+
+        <div class="aq-grid">
+          <div class="aq-left">
+            <div class="aq-cell">
+              <span class="aq-celltitle">📥 LAYER 5: SOURCE FILE / URL GATEWAY</span>
+              <textarea id="aqPayload" rows="6" placeholder="Drop elite group selection lists, ecosystem text reports, or target link URLs here..."></textarea>
+              <button type="button" id="aqScoutBtn" class="aq-scoutbtn">INGEST &amp; HARVEST UNIVERSE</button>
+              <p class="aq-hint">Tickers, company names from this dashboard, or URLs — the scout resolves what it can, adds it to the spectrum, and logs every step. Paper engine: prices simulate in PAPER mode; LIVE mode reads the last real close from the MisoLists price store (<code>data/prices/</code>). Not investment advice.</p>
+            </div>
+            <div class="aq-cell aq-termcell">
+              <span class="aq-celltitle">🖥️ LAYER 9: AGENT REAL-TIME LOG TERMINAL STREAM</span>
+              <div id="aqTape" class="aq-tape" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <div class="aq-right">
+            <div class="aq-cell aq-tablecell">
+              <span class="aq-celltitle">📊 LAYER 8: PRE-SORTED SOVEREIGN POSITION SPECTRUM (OPTIMIZED PUBLIC BUYS DECILLED FIRST)</span>
+              <div class="aq-tablescroll">
+                <table class="aq-table">
+                  <thead><tr>
+                    <th>ASSET IDENTITY</th>
+                    <th class="aq-accent">🛡️ INTRINSIC FAIR VALUE</th>
+                    <th>🛑 FLOOR PRICE (LEFT)</th>
+                    <th class="aq-livecol">⚡ LIVE PRICE (CENTER)</th>
+                    <th>🚀 CAP PRICE (RIGHT)</th>
+                    <th class="aq-num">📈 PROJECTED PROFITS (D / W / M)</th>
+                  </tr></thead>
+                  <tbody id="aqMatrixBody"></tbody>
+                </table>
+              </div>
+              <p class="aq-hint">Projected profit = start capital ÷ live price × (fair value − live price), captured 25% (D) / 60% (W) / 100% (M) on drift toward fair value. Paper model — verifies nothing about the real world; check the underlying research before acting on any row.</p>
+            </div>
+            <div class="aq-charts">
+              <div class="aq-cell aq-chartcell">
+                <span class="aq-celltitle">📈 METRIC A: REAL-TIME PORTFOLIO GROWTH CURVE</span>
+                <div class="aq-chartwrap"><canvas id="aqChartGrowth"></canvas></div>
+              </div>
+              <div class="aq-cell aq-chartcell">
+                <span class="aq-celltitle">🎯 METRIC B: SPECTRUM POSITION MAP (FLOOR → CAP)</span>
+                <div class="aq-chartwrap"><canvas id="aqChartSpectrum"></canvas></div>
+              </div>
+              <div class="aq-cell aq-chartcell">
+                <span class="aq-celltitle">💹 METRIC C: PROJECTED PROFIT LADDER (D / W / M)</span>
+                <div class="aq-chartwrap"><canvas id="aqChartLadder"></canvas></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="foot">
     <span>MisoLists Strategic Pipeline Control Room</span>
     <span class="muted">Autonomous ingestion · checksum-deduped · source-lineaged. A research and learning aid for educational purposes only — not personalized financial, legal, or tax advice. Conduct your own due diligence and consult a licensed professional.</span>
@@ -221,5 +295,6 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="assets/data.js"></script>
 <script src="assets/app.js"></script>
+<script src="assets/aqos.js"></script>
 </body>
 </html>
